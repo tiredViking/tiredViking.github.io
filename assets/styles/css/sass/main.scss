@@ -1,0 +1,604 @@
+@use "variables";
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+  background-color: variables.$desk_color;
+  background-image: url(/assets/img/purty-wood.png);
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+}
+html {
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(
+      circle at 20% 20%,
+      transparent 40%,
+      rgba(0, 0, 0, 0.15) 100%
+    );
+    z-index: variables.$lamp_z_index;
+  }
+
+  body {
+    padding: 10px;
+    font-family: variables.$body_font;
+    color: variables.$body_color;
+
+    .header,
+    .page_container {
+      background-color: variables.$paper_color;
+      border: 2px solid variables.$paper_border_color;
+      box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.15);
+      width: 90%;
+    }
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      z-index: variables.$header_z_index;
+
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 8px;
+
+      .job_title {
+        margin-bottom: 10px;
+        text-align: center;
+        font-family: variables.$link_font;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: variables.$job_title_color;
+        border-top: 1px solid #ccc;
+        padding-top: 10px;
+      }
+
+      .introduction {
+        text-align: justify;
+        padding: 0 15px 10px 15px;
+        max-width: 600px;
+        margin: 5px auto;
+        font-family: variables.$body_font;
+        font-style: italic;
+        font-size: 1.2rem;
+        text-align: center;
+        color: variables.$body_color;
+        line-height: 1.6;
+        border-left: 3px solid rgba(0, 0, 0, 0.1); // Looks like a margin line
+      }
+
+      .hero {
+        text-align: center;
+        margin: 20px 20px 5px 20px;
+        font-family: variables.$title_font;
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 0.8;
+        color: variables.$body_color;
+      }
+
+      .menu_link {
+        display: block;
+        padding: 10px;
+        cursor: pointer;
+        font-family: variables.$link_font;
+        font-size: 0.9rem;
+        border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+        transition: background 0.2s;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.05);
+          color: variables.$link_color;
+        }
+      }
+      // media query for header
+      @media (min-width: variables.$desktop_min_width) {
+        width: 80%;
+        padding: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "title hero"
+          "intro hero";
+
+        .job_title {
+          grid-area: title;
+          text-align: left;
+          border: none;
+        }
+
+        .hero {
+          grid-area: hero;
+          font-size: 5rem;
+          text-align: center;
+        }
+
+        .introduction {
+          grid-area: intro;
+          text-align: left;
+          margin: 0;
+          border-left: 3px solid #ccc;
+          font-size: 1.4rem;
+        }
+      } // end media Query
+    } // end header*/
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 10px;
+
+      .sheet_toggle {
+        display: none;
+      }
+
+      .sheet_wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .page_container {
+          display: block;
+          max-width: 900px;
+          padding: 10px 30px 30px 30px;
+          border-radius: 225px 15px 255px 15px / 15px 255px 15px 225px;
+
+          /*code for creating the stack of papers*/
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+
+          /*pulls the sheet under the previous one*/
+          margin-top: -40px;
+          position: relative;
+          transition: all 0.4s ease-in-out;
+
+          /*to show a preview of the content of that page:*/
+          height: 140px;
+          overflow: hidden;
+
+          h2 {
+            text-align: center;
+            font-family: variables.$title_font;
+            font-size: 3rem;
+            margin-bottom: 5px;
+            color: variables.$body_color;
+            line-height: 1;
+
+            @media (min-width: variables.$desktop_min_width) {
+              font-size: 5rem;
+            }
+          }
+
+          h3 {
+            color: variables.$link_color;
+            text-align: center;
+            font-family: variables.$link_font;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            margin-top: 5px;
+
+            @media (min-width: variables.$desktop_min_width) {
+              font-size: 1.5rem;
+            }
+          }
+
+          p {
+            text-align: justify;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            color: variables.$body_color;
+
+            @media (min-width: variables.$desktop_min_width) {
+              font-size: 1.5rem;
+            }
+
+            strong {
+              color: variables.$link_color;
+              font-weight: 600;
+            }
+          } // end p
+
+          .quote_container {
+            margin: 5px auto 10px auto;
+            padding: 10px 20px;
+            border-left: 2px solid rgba(variables.$link_color, 0.2);
+            background: rgba(139, 69, 19, 0.02);
+            max-width: 85%;
+          }
+
+          .blockquote {
+            font-family: variables.$title_font;
+            font-size: 1.8rem;
+            text-wrap: balance;
+            margin: 0;
+            line-height: 1.2;
+
+            @media (min-width: variables.$desktop_min_width) {
+              font-size: 2.4rem;
+            }
+          }
+
+          .citation {
+            display: block;
+            text-align: right;
+            font-family: variables.$body_font;
+            font-size: 0.85rem;
+            font-style: italic;
+            color: variables.$citation_color;
+
+            @media (min-width: variables.$desktop_min_width) {
+              font-size: 1.2rem;
+            }
+          }
+
+          .page_content {
+            .tools_grid {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+              padding: 10px;
+              width: 100%;
+
+              @media (min-width: variables.$desktop_min_width) {
+                font-size: 1.5rem;
+              }
+
+              .tools {
+                width: 100%;
+                padding-bottom: 10px;
+                margin-bottom: 15px;
+                border-bottom: 2px solid rgba(variables.$link_color, 0.2);
+                ul {
+                  list-style-type: "";
+                  li {
+                    font-style: italic;
+                    font-weight: 550;
+
+                    @media (min-width: variables.$desktop_min_width) {
+                      font-size: 1.5rem;
+                    }
+                  }
+                }
+              } //end tools
+              .tools_label {
+                margin-bottom: 0;
+                color: variables.$link_color;
+                font-weight: 600;
+                margin-left: -15px;
+                font-size: 0.9rem;
+
+                @media (min-width: variables.$desktop_min_width) {
+                  font-size: 1.5rem;
+                }
+              }
+            } // end tools_grid
+
+            .card {
+              border-radius: 225px 15px 255px 15px / 15px 255px 15px 225px;
+
+              .form_memo {
+                background-color: variables.$memo_color;
+                border-radius: 225px 15px 255px 15px / 15px 255px 15px 225px;
+                border: 2px solid variables.$border_color;
+
+                label {
+                  font-family: variables.$body_font;
+                }
+
+                button {
+                  background-color: variables.$button_color;
+                  color: #fff;
+                  font-weight: bold;
+                }
+              }
+            }
+            .container {
+              margin-top: 10px;
+            }
+          } // end page_content
+        } // end page_container
+      } // end sheet_wrapper
+
+      .sheet_wrapper:nth-child(even) .page_container {
+        transform: rotate(1.5deg);
+      }
+
+      .sheet_wrapper:nth-child(odd) .page_container {
+        transform: rotate(-0.5deg);
+      }
+
+      /*if the checkbox is selected, style the page relative to it*/
+      .sheet_toggle:checked + .page_container {
+        height: auto;
+        max-height: 2000px;
+        margin-bottom: 20px; // Push it away from the stack above it
+        transform: rotate(0deg) translateY(-10px) scale(1.02);
+        z-index: variables.$raised_page_z_index;
+        box-shadow: 15px 20px 35px rgba(0, 0, 0, 0.3);
+      }
+
+      .sheet_wrapper:nth-of-type(1) .page_container {
+        margin-top: 15px;
+        /*separate first page from header*/
+      }
+
+      .sheet_wrapper:last-child {
+        .page_container {
+          height: auto;
+          /*expand last page automatically*/
+        }
+      }
+      // media query for main
+      @media (min-width: variables.$desktop_min_width) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        padding-top: 50px;
+
+        .sheet_wrapper {
+          width: 45%; // Show sheets side-by-side
+
+          .page_container {
+            margin-top: 0 !important; // Remove the "stacking" negative margin
+            height: 500px; // fixed height so they look like uniform papers
+            overflow-y: auto;
+
+            .page_content {
+              p {
+                font-size: 1.4rem;
+              }
+            }
+          }
+        }// end sheet_wrapperr
+      } // end media query for main
+    } // end main
+
+    .change_lang {
+      position: fixed;
+      bottom: 40px;
+      left: 5px;
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+      z-index: variables.$stamp_z_index;
+
+      .stamp {
+        text-decoration: none;
+        font-family: variables.$body_font;
+        font-weight: bold;
+        color: variables.$border_color;
+        padding: 10px;
+        mix-blend-mode: multiply;
+        border: 2px solid rgba(0, 0, 0, 0.1);
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        background-color: variables.$stamp_color;
+        border-radius: 48% 52% 50% 50% / 50% 48% 52% 50%;
+        width: 45px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(-15deg);
+        transition: all 0.2s;
+        opacity: 0.8;
+
+        &:hover {
+          transform: rotate(0deg) scale(1.1);
+        }
+      }// end stamp
+    }// end lang
+
+    .sticky_memo_container {
+      position: fixed;
+      bottom: 30px;
+      right: 10px;
+      z-index: variables.$memo_z_index;
+      background-color: variables.$memo_color;
+      display: flex;
+      transition: all 0.3s ease-in-out;
+      width: 80px;
+      height: 80px;
+      border: 2px solid variables.$border_color;
+      border-radius: 225px 15px 255px 15px / 15px 255px 15px 225px;
+      box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.2);
+
+      .memo_checkbox {
+        display: none;
+      }
+
+      &:has(.memo_checkbox:checked) {
+        border-radius: 225px 15px 255px 15px / 15px 255px 15px 225px;
+        box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.2);
+        width: 180px;
+        height: auto;
+        transform: translateY(-10px);
+        transition: all 0.3s ease-in-out;
+        padding-bottom: 15px;
+
+        .sticky_memo {
+          padding: 0 10px;
+          justify-content: flex-start;
+
+          .memo_nav {
+            display: flex;
+          }
+
+          .memo_text {
+            margin-bottom: 5px;
+            border-bottom: 2px solid #333;
+            font-weight: bolder;
+          }
+        }// end sticky_memo
+      }// end &:has 
+
+      .sticky_memo {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 0 5px 5px 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        .memo_pin {
+          font-size: 1.2rem;
+          filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+          margin-top: -10px;
+        }
+
+        .memo_text {
+          font-family: variables.$title_font;
+          font-size: 1.6rem;
+          font-weight: bolder;
+        }
+
+        .memo_nav {
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          height: 100%;
+          margin-top: 5px;
+          position: relative;
+          z-index: variables.$link_z_index;
+
+          label,
+          a {
+            display: block;
+            font-family: variables.$link_font;
+            padding: 12px 5px;
+            width: 100%;
+            font-size: 0.85rem;
+            color: variables.$link_color;
+            text-align: center;
+            text-decoration: none;
+
+            &:hover {
+              cursor: pointer;
+              text-decoration: underline;
+              font-weight: bolder;
+            }
+          }// end label, a
+        } //end memo_nav
+      } // end sticky_memo
+    }// end sticky_memo_container
+
+    #reset_all {
+      display: none;
+    }
+
+    #reset_all:checked ~ .sheet_wrapper .page_container {
+      height: 140px;
+      margin-top: -40px;
+      transform: rotate(1.5deg);
+      box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.15);
+    }
+    .desk_edge {
+      width: 100%;
+      background: variables.$leather_color;
+      border-top: 4px solid #1a110e;
+      box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.5);
+      padding: 40px 20px;
+      margin-top: 20px; // Space after the last paper sheet
+      position: relative;
+      z-index: 10;
+
+      .footer_content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        // put items in the footer orizontally in desktop
+        @media (min-width: variables.$desktop_min_width) {
+          flex-direction: row;
+          justify-content: center;
+        }
+      }// end footer_content
+
+      .copyright {
+        font-family: variables.$link_font;
+        color: rgba(variables.$gold_ink_color, 0.6);
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .social_links {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @media (min-width: variables.$desktop_min_width) {
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .social_item {
+          text-decoration: none;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: translateY(-5px);
+
+            .icon {
+              color: white;
+              border-color: white;
+            }
+
+            .label {
+              color: variables.$gold_ink_color;
+            }
+          }// end hover
+
+          .icon {
+            font-family: variables.$link_font;
+            font-weight: bold;
+            color: variables.$gold_ink_color;
+            border: 1px solid variables.$gold_ink_color;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            transition: all 0.3s ease;
+          }
+          .label {
+            font-family: variables.$body_font;
+            font-style: italic;
+            font-size: 1rem;
+            color: rgba(variables.$gold_ink_color, 0.8);
+          }
+        }// end social_item
+      }// end social_links
+    }// end desk_edge
+  } //end body
+} // end html

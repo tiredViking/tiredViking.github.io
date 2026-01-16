@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il mio portfolio</title>
+    <link rel="icon" type="image/png" sizes="180x180" href="assets/img/favicon.png">
+    <!--CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/styles/css/compiled_sass/main.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="job_title">Gregorio Viola<br>Studente di CS & Sviluppatore FullStack</div>
+        <div class=hero>Ecco la mia scrivania!</div>
+        <div class="introduction">Tutto ciò che può servire è qui sopra. Prendi uno degli appunti, gira una pagina, sentiti libero di rovistare tra i fogli e vedere cosa c’è dentro.</div>
+    </header>
+
+    <main class="desk">
+        <!--A BIT OF BACKGROUND-->
+        <div class="sheet_wrapper">
+            <input type="radio" id="presentation_sheet" name="portfolio_pages" class="sheet_toggle">
+            <label for="presentation_sheet" class="page_container">
+                <article id="presentation" class="page_content">
+                    <h2>Un po’ di contesto</h2>
+                    <h3>LINGUAGGIO, LOGICA E LINUX</h3>
+                    <div class="quote_container">
+                        <blockquote class="blockquote">"Questo che vuol dire?"</blockquote>
+                        <cite class="citation">— Io, mentre leggo Shakespeare o il codice che ho scritto un attimo
+                            fa</cite>
+                    </div>
+                    <p>
+                        Quando studiavo letteratura inglese in università pensavo che <em>The Waste
+                            Land</em> di T.S. Eliot fosse complicato. Non avevo ancora incontrato JavaScript.<br>
+                        Ho sempre trovato le lingue affascinanti e intriganti; grazie al mio PC che ha smesso di
+                        funzionare durante una lezione (e al mio portafoglio non in ottima forma) ho scoperto Linux e,
+                        con esso, un nuovo mondo di linguaggi diversi da quelli
+                        <em>naturali</em> a cui ero abituato: i <strong><em>linguaggi di programmazione</em></strong>.
+                        Così, mentre mi laureavo in Lingue Moderne, ho iniziato a smanettarci, insieme
+                        all’inglese e al francese; dopo la laurea, ho trascorso due anni presso <strong>Altea
+                            IN</strong> come Junior ERP Consultant, imparando i processi aziendali e i sistemi ERP; ora
+                        sto frequentando un master in <strong>FullStack Development e AI Agents</strong>, oltre a una
+                        laurea triennale in Informatica, con l’obiettivo di unire le mie competenze linguistiche
+                        con quelle tecniche di uno sviluppatore; ho scoperto che, in fondo, un buon codice non è
+                        poi così diverso da una buona poesia.<br>
+                        La mia scrivania è sempre un po’ affollata di fogli iniziati e bozze a metà, ma il codice sta
+                        finalmente iniziando ad avere senso (come accadde con <em>The Waste Land</em>). Sfoglia pure gli altri fogli per saperne qualcosa in più!
+                    </p>
+                </article>
+            </label>
+        </div>
+
+        <!--MY SKILLS-->
+        <div class="sheet_wrapper">
+            <input type="radio" id="skills_sheet" name="portfolio_pages" class="sheet_toggle">
+            <label for="skills_sheet" class="page_container">
+                <article id="skills" class="page_content">
+                    <h2>I miei strumenti</h2>
+                    <h3>Linguaggi e competenze</h3>
+                    <div class="tools_grid">
+                        <label for="frontend" class="tools_label">Frontend:</label>
+                        <div class="tools" id="frontend">
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS - SASS (+Bootstrap)</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </div>
+                        <label for="backend" class="tools_label">Backend:</label>
+                        <div class="tools" id="backend">
+                            <ul>
+                                <li>Python</li>
+                                <li>C</li>
+                                <li>Bash</li>
+                                <li>SQL</li>
+                            </ul>
+                        </div>
+                        <label class="tools_label" for="tools_and_erp">Altro:</label>
+                        <div class="tools" id="tools_and_erp" id="tools_and_erp">
+                            <ul>
+                                <li>Conoscenza di Linux (Ubuntu, Fedora, Kali)</li>
+                                <li>ERP Infor LN</li>
+                            </ul>
+                        </div>
+                        <label class="tools_label" for="bonus">Inoltre:</label>
+                        <div class="tools" id="bonus">
+                            Quaderni e stilografiche; per quando le cose si fanno <strong>davvero</strong> complicate.
+                        </div>
+                    </div>
+                </article>
+            </label>
+        </div>
+        <!--MY PROJECTS-->
+        <div class="sheet_wrapper">
+            <input type="radio" id="projects_sheet" name="portfolio_pages" class="sheet_toggle">
+            <label for="projects_sheet" class="page_container">
+                <article id="projects" class="page_content">
+                    <h2>I miei progetti</h2>
+                    <h3>Beh, proprio questa pagina web!</h3>
+                    <p>Per ora...<br>
+                        Questa pagina è il mio primo vero progetto. Non c’è ancora molto, ma aggiungerò contenuti man
+                        mano che andrò avanti. In questo momento sto realizzando un programma in C per giocare a go in
+                        ASCII art in una shell bash; altri progetti arriveranno presto!</p>
+                </article>
+            </label>
+        </div>
+
+        <!--CONTACT ME-->
+        <div class="sheet_wrapper">
+            <input type="radio" id="contact_sheet" name="portfolio_pages" class="sheet_toggle" checked>
+            <label for="contact_sheet" class="page_container">
+                <article id="contact_me" class="page_content">
+                    <h2>Contattami</h2>
+                    <h3>Usa questo post-it se vuoi scrivermi qualcosa:</h3>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body form_memo">
+                                        <form>
+                                            <div class="mb-3">
+                                                <label for="emailInput" class="form-label">Indirizzo email</label>
+                                                <input type="email" class="form-control" id="emailInput"
+                                                    placeholder="nome@esempio.com" required>
+                                                <div class="form-text">La tua email non lascerà questa scrivania...
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="messageInput" class="form-label">Messaggio</label>
+                                                <textarea class="form-control" id="messageInput" rows="4"
+                                                    placeholder="Il tuo messaggio..." required></textarea>
+                                            </div>
+                                            <div class="d-grid">
+                                                <button type="submit" class="btn btn-primary">Invia memo</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </label>
+        </div>
+    </main>
+
+    <div class="change_lang">
+        <a href="index.html" class="stamp">EN</a>
+        <a href="main-it.html" class="stamp">IT</a>
+    </div>
+
+    <input type="radio" id="reset_all" name="portfolio_pages" class="sheet_toggle">
+
+    <div class="sticky_memo_container">
+        <input type="checkbox" id="memo_toggle" class="memo_checkbox">
+        <label for="memo_toggle" class="sticky_memo">
+            <span class="memo_pin">📌</span>
+            <span class="memo_text">Menu</span>
+            <nav class="memo_nav">
+                <label class="menu_link" for="presentation_sheet">Un po’ di contesto</label>
+                <label class="menu_link" for="skills_sheet">I miei strumenti</label>
+                <label class="menu_link" for="projects_sheet">I miei progetti</label>
+                <label class="menu_link" for="contact_sheet">Contattami</label>
+                <a href="cv_ita.html" target="_blank">Il mio CV</a>
+
+                <label for="reset_all" class="menu_link reset_btn">Riordina scrivania</label>
+            </nav>
+        </label>
+    </div>
+    <footer class="desk_edge">
+        <div class="footer_content">
+            <div class="social_links">
+                <a href="https://github.com/tiredViking" target="_blank" class="social_item">
+                    <span class="icon">Github</span>
+                    <span class="label">Source Code</span>
+                </a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank" class="social_item">
+                    <span class="icon">Linkedin</span>
+                    <span class="label">Professional Network</span>
+                </a>
+                <a href="https://gitlab.com/tired_viking" target="_blank" class="social_item">
+                    <span class="icon">Gitlab</span>
+                    <span class="label">Source Code</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

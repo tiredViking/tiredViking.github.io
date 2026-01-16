@@ -1,0 +1,545 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
+/*cv variables*/
+/*main variables*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+  background-color: #4c2b20;
+  background-image: url(/assets/img/purty-wood.png);
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+}
+
+html body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(circle at 20% 20%, transparent 40%, rgba(0, 0, 0, 0.15) 100%);
+  z-index: 4000;
+}
+html body {
+  padding: 10px;
+  font-family: "EB Garamond", serif;
+  color: #1a1614;
+}
+html body .header,
+html body .page_container {
+  background-color: #fdfaf0;
+  border: 2px solid #2a1812;
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.15);
+  width: 90%;
+}
+html body .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+}
+html body .header .job_title {
+  margin-bottom: 10px;
+  text-align: center;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #555;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+html body .header .introduction {
+  text-align: justify;
+  padding: 0 15px 10px 15px;
+  max-width: 600px;
+  margin: 5px auto;
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #1a1614;
+  line-height: 1.6;
+  border-left: 3px solid rgba(0, 0, 0, 0.1);
+}
+html body .header .hero {
+  text-align: center;
+  margin: 20px 20px 5px 20px;
+  font-family: "Tangerine", cursive;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 0.8;
+  color: #1a1614;
+}
+html body .header .menu_link {
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9rem;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+  transition: background 0.2s;
+}
+html body .header .menu_link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #0047AB;
+}
+@media (min-width: 992px) {
+  html body .header {
+    width: 80%;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title hero" "intro hero";
+  }
+  html body .header .job_title {
+    grid-area: title;
+    text-align: left;
+    border: none;
+  }
+  html body .header .hero {
+    grid-area: hero;
+    font-size: 5rem;
+    text-align: center;
+  }
+  html body .header .introduction {
+    grid-area: intro;
+    text-align: left;
+    margin: 0;
+    border-left: 3px solid #ccc;
+    font-size: 1.4rem;
+  }
+}
+html body main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+}
+html body main .sheet_toggle {
+  display: none;
+}
+html body main .sheet_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+html body main .sheet_wrapper .page_container {
+  display: block;
+  max-width: 900px;
+  padding: 10px 30px 30px 30px;
+  border-radius: 225px 15px 255px 15px/15px 255px 15px 225px;
+  /*code for creating the stack of papers*/
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  /*pulls the sheet under the previous one*/
+  margin-top: -40px;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  /*to show a preview of the content of that page:*/
+  height: 140px;
+  overflow: hidden;
+}
+html body main .sheet_wrapper .page_container h2 {
+  text-align: center;
+  font-family: "Tangerine", cursive;
+  font-size: 3rem;
+  margin-bottom: 5px;
+  color: #1a1614;
+  line-height: 1;
+}
+@media (min-width: 992px) {
+  html body main .sheet_wrapper .page_container h2 {
+    font-size: 5rem;
+  }
+}
+html body main .sheet_wrapper .page_container h3 {
+  color: #0047AB;
+  text-align: center;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  margin-top: 5px;
+}
+@media (min-width: 992px) {
+  html body main .sheet_wrapper .page_container h3 {
+    font-size: 1.5rem;
+  }
+}
+html body main .sheet_wrapper .page_container p {
+  text-align: justify;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #1a1614;
+}
+@media (min-width: 992px) {
+  html body main .sheet_wrapper .page_container p {
+    font-size: 1.5rem;
+  }
+}
+html body main .sheet_wrapper .page_container p strong {
+  color: #0047AB;
+  font-weight: 600;
+}
+html body main .sheet_wrapper .page_container .quote_container {
+  margin: 5px auto 10px auto;
+  padding: 10px 20px;
+  border-left: 2px solid rgba(0, 71, 171, 0.2);
+  background: rgba(139, 69, 19, 0.02);
+  max-width: 85%;
+}
+html body main .sheet_wrapper .page_container .blockquote {
+  font-family: "Tangerine", cursive;
+  font-size: 1.8rem;
+  text-wrap: balance;
+  margin: 0;
+  line-height: 1.2;
+}
+@media (min-width: 992px) {
+  html body main .sheet_wrapper .page_container .blockquote {
+    font-size: 2.4rem;
+  }
+}
+html body main .sheet_wrapper .page_container .citation {
+  display: block;
+  text-align: right;
+  font-family: "EB Garamond", serif;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #666;
+}
+@media (min-width: 992px) {
+  html body main .sheet_wrapper .page_container .citation {
+    font-size: 1.2rem;
+  }
+}
+html body main .sheet_wrapper .page_container .page_content .tools_grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10px;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  html body main .sheet_wrapper .page_container .page_content .tools_grid {
+    font-size: 1.5rem;
+  }
+}
+html body main .sheet_wrapper .page_container .page_content .tools_grid .tools {
+  width: 100%;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid rgba(0, 71, 171, 0.2);
+}
+html body main .sheet_wrapper .page_container .page_content .tools_grid .tools ul {
+  list-style-type: "";
+}
+html body main .sheet_wrapper .page_container .page_content .tools_grid .tools ul li {
+  font-style: italic;
+  font-weight: 550;
+}
+@media (min-width: 992px) {
+  html body main .sheet_wrapper .page_container .page_content .tools_grid .tools ul li {
+    font-size: 1.5rem;
+  }
+}
+html body main .sheet_wrapper .page_container .page_content .tools_grid .tools_label {
+  margin-bottom: 0;
+  color: #0047AB;
+  font-weight: 600;
+  margin-left: -15px;
+  font-size: 0.9rem;
+}
+@media (min-width: 992px) {
+  html body main .sheet_wrapper .page_container .page_content .tools_grid .tools_label {
+    font-size: 1.5rem;
+  }
+}
+html body main .sheet_wrapper .page_container .page_content .card {
+  border-radius: 225px 15px 255px 15px/15px 255px 15px 225px;
+}
+html body main .sheet_wrapper .page_container .page_content .card .form_memo {
+  background-color: #ffe101;
+  border-radius: 225px 15px 255px 15px/15px 255px 15px 225px;
+  border: 2px solid #2d2d2d;
+}
+html body main .sheet_wrapper .page_container .page_content .card .form_memo label {
+  font-family: "EB Garamond", serif;
+}
+html body main .sheet_wrapper .page_container .page_content .card .form_memo button {
+  background-color: #0047AB;
+  color: #fff;
+  font-weight: bold;
+}
+html body main .sheet_wrapper .page_container .page_content .container {
+  margin-top: 10px;
+}
+html body main .sheet_wrapper:nth-child(even) .page_container {
+  transform: rotate(1.5deg);
+}
+html body main .sheet_wrapper:nth-child(odd) .page_container {
+  transform: rotate(-0.5deg);
+}
+html body main {
+  /*if the checkbox is selected, style the page relative to it*/
+}
+html body main .sheet_toggle:checked + .page_container {
+  height: auto;
+  max-height: 2000px;
+  margin-bottom: 20px;
+  transform: rotate(0deg) translateY(-10px) scale(1.02);
+  z-index: 2;
+  box-shadow: 15px 20px 35px rgba(0, 0, 0, 0.3);
+}
+html body main .sheet_wrapper:nth-of-type(1) .page_container {
+  margin-top: 15px;
+  /*separate first page from header*/
+}
+html body main .sheet_wrapper:last-child .page_container {
+  height: auto;
+  /*expand last page automatically*/
+}
+@media (min-width: 992px) {
+  html body main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding-top: 50px;
+  }
+  html body main .sheet_wrapper {
+    width: 45%;
+  }
+  html body main .sheet_wrapper .page_container {
+    margin-top: 0 !important;
+    height: 500px;
+    overflow-y: auto;
+  }
+  html body main .sheet_wrapper .page_container .page_content p {
+    font-size: 1.4rem;
+  }
+}
+html body {
+  /*end main*/
+}
+html body .change_lang {
+  position: fixed;
+  bottom: 40px;
+  left: 5px;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  z-index: 3000;
+}
+html body .change_lang .stamp {
+  text-decoration: none;
+  font-family: "EB Garamond", serif;
+  font-weight: bold;
+  color: #2d2d2d;
+  padding: 10px;
+  mix-blend-mode: multiply;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background-color: #ffe101;
+  border-radius: 48% 52% 50% 50%/50% 48% 52% 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-15deg);
+  transition: all 0.2s;
+  opacity: 0.8;
+}
+html body .change_lang .stamp:hover {
+  transform: rotate(0deg) scale(1.1);
+}
+html body .sticky_memo_container {
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  z-index: 2000;
+  background-color: #ffe101;
+  display: flex;
+  transition: all 0.3s ease-in-out;
+  width: 80px;
+  height: 80px;
+  border: 2px solid #2d2d2d;
+  border-radius: 225px 15px 255px 15px/15px 255px 15px 225px;
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.2);
+}
+html body .sticky_memo_container .memo_checkbox {
+  display: none;
+}
+html body .sticky_memo_container:has(.memo_checkbox:checked) {
+  border-radius: 225px 15px 255px 15px/15px 255px 15px 225px;
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.2);
+  width: 180px;
+  height: auto;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+  padding-bottom: 15px;
+}
+html body .sticky_memo_container:has(.memo_checkbox:checked) .sticky_memo {
+  padding: 0 10px;
+  justify-content: flex-start;
+}
+html body .sticky_memo_container:has(.memo_checkbox:checked) .sticky_memo .memo_nav {
+  display: flex;
+}
+html body .sticky_memo_container:has(.memo_checkbox:checked) .sticky_memo .memo_text {
+  margin-bottom: 5px;
+  border-bottom: 2px solid #333;
+  font-weight: bolder;
+}
+html body .sticky_memo_container .sticky_memo {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 5px 5px 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+html body .sticky_memo_container .sticky_memo .memo_pin {
+  font-size: 1.2rem;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+  margin-top: -10px;
+}
+html body .sticky_memo_container .sticky_memo .memo_text {
+  font-family: "Tangerine", cursive;
+  font-size: 1.6rem;
+  font-weight: bolder;
+}
+html body .sticky_memo_container .sticky_memo .memo_nav {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin-top: 5px;
+  position: relative;
+  z-index: 3000;
+}
+html body .sticky_memo_container .sticky_memo .memo_nav label,
+html body .sticky_memo_container .sticky_memo .memo_nav a {
+  display: block;
+  font-family: "JetBrains Mono", monospace;
+  padding: 12px 5px;
+  width: 100%;
+  font-size: 0.85rem;
+  color: #0047AB;
+  text-align: center;
+  text-decoration: none;
+}
+html body .sticky_memo_container .sticky_memo .memo_nav label:hover,
+html body .sticky_memo_container .sticky_memo .memo_nav a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bolder;
+}
+html body #reset_all {
+  display: none;
+}
+html body #reset_all:checked ~ .sheet_wrapper .page_container {
+  height: 140px;
+  margin-top: -40px;
+  transform: rotate(1.5deg);
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.15);
+}
+html body .desk_edge {
+  width: 100%;
+  background: #261a15;
+  border-top: 4px solid #1a110e;
+  box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.5);
+  padding: 40px 20px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 10;
+}
+html body .desk_edge .footer_content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+@media (min-width: 992px) {
+  html body .desk_edge .footer_content {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+html body .desk_edge .copyright {
+  font-family: "JetBrains Mono", monospace;
+  color: rgba(197, 160, 89, 0.6);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+html body .desk_edge .social_links {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+@media (min-width: 992px) {
+  html body .desk_edge .social_links {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+html body .desk_edge .social_links .social_item {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+html body .desk_edge .social_links .social_item:hover {
+  transform: translateY(-5px);
+}
+html body .desk_edge .social_links .social_item:hover .icon {
+  color: white;
+  border-color: white;
+}
+html body .desk_edge .social_links .social_item:hover .label {
+  color: #c5a059;
+}
+html body .desk_edge .social_links .social_item .icon {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: bold;
+  color: #c5a059;
+  border: 1px solid #c5a059;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+}
+html body .desk_edge .social_links .social_item .label {
+  font-family: "EB Garamond", serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: rgba(197, 160, 89, 0.8);
+}
+
+/*# sourceMappingURL=main.css.map */
