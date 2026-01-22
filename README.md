@@ -5,7 +5,7 @@ Personal Portfolio project developed for **Start2Impact** Fullstack Development 
 ## Demo
 Find the live project at: [tiredviking.github.io](https://tiredviking.github.io)
 
-## 🛠 Tech Stack
+## Tech Stack
 * **HTML5**: with SEO optimization.
 * **CSS3 / Sass (SCSS)**
 * **Bootstrap 5**
