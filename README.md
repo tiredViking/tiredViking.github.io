@@ -13,6 +13,7 @@ Find the live project at: [tiredviking.github.io](https://tiredviking.github.io)
 ## Project structure
 ```text
 .
+├── README.md
 ├── cv.html                      # CV page (EN)  
 ├── cv_ita.html                  # CV page (IT)  
 ├── index.html                   # Main page, entry point (EN)  
