@@ -1,0 +1,24 @@
+@use "variables";
+
+.lang-item {
+    font-size: 0.9rem;
+    color: variables.$secondary-color;
+    
+    a {
+        text-decoration: none;
+        color: variables.$secondary-color;
+        transition: variables.$transition-base;
+        font-weight: 700;
+        
+        &.active {
+            color: variables.$primary-color;
+            font-weight: 700;
+            pointer-events: none;
+        }
+        
+        &:hover:not(.active) {
+            color: variables.$primary-color;
+        }
+    }
+}
+

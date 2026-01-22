@@ -1,5 +1,5 @@
-/*Styling for CV page*/
-@use 'variables';
+@use 'namespaces/variables';
+
 /*import latin modern font*/
 @import url('https://cdn.jsdelivr.net/npm/@fontsource/latin-modern-roman@5.0.0/index.css');
 
@@ -8,10 +8,10 @@ html {
 
   body {
     font-family: "Latin Modern Sans", sans-serif;
-    background-color: variables.$cv_background_color;
+    background-color: variables.$light-bg;
 
     h2 {
-      color: variables.$cv_font_header_color;
+      color: variables.$primary-color;
     }
   }
 }

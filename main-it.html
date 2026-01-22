@@ -1,196 +1,207 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il mio portfolio</title>
-    <link rel="icon" type="image/png" sizes="180x180" href="assets/img/favicon.png">
-    <!--CSS-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/styles/compiled_sass/main.css">
+    <meta name="description" content="Portfolio di Gregorio Viola, CS Student e FullStack Developer.">
+    <title>Gregorio Viola | FullStack Developer Portfolio</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/site.webmanifest">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/sass/compiled_sass/main.css">
 </head>
 
 <body>
-    <header class="header">
-        <div class="job_title">Gregorio Viola<br>Studente di CS & Sviluppatore FullStack</div>
-        <div class=hero>Ecco la mia scrivania!</div>
-        <div class="introduction">Tutto ciò che può servire è qui sopra. Prendi uno degli appunti, gira una pagina, sentiti libero di rovistare tra i fogli e vedere cosa c’è dentro.</div>
-    </header>
+    <header>
+    <nav class="custom-nav">
+        <div class="container d-flex justify-content-between align-items-center py-2">
+            <a class="navbar-brand fw-bold text-primary" href="#">
+                <span class="border border-primary border-2 px-2 py-1">GV</span>
+            </a>
 
-    <main class="desk">
-        <!--A BIT OF BACKGROUND-->
-        <div class="sheet_wrapper">
-            <input type="radio" id="presentation_sheet" name="portfolio_pages" class="sheet_toggle">
-            <label for="presentation_sheet" class="page_container">
-                <article id="presentation" class="page_content">
-                    <h2>Un po’ di contesto</h2>
-                    <h3>LINGUAGGIO, LOGICA E LINUX</h3>
-                    <div class="quote_container">
-                        <blockquote class="blockquote">"Questo che vuol dire?"</blockquote>
-                        <cite class="citation">— Io, mentre leggo Shakespeare o il codice che ho scritto un attimo
-                            fa</cite>
+            <input type="checkbox" id="menu-toggle" class="d-none">
+            <label for="menu-toggle" class="menu-button-container d-lg-none">
+                <div class="hamburger"></div>
+            </label>
+
+            <ul class="nav-menu list-unstyled m-0">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Progetti</a></li>
+                <li><a href="#about">Chi sono</a></li>
+                <li class="ms-lg-3"><a href="#contact" class="btn-primary-custom">Contatti</a></li>
+                <li><a href="cv_ita.html">Il mio CV</a></li>
+                <li class="ms-lg-4 lang-item">
+                    <a href="main-it.html" class="active">IT</a> | <a href="index.html">EN</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+    <main>
+    <section id="home" class="hero-section d-flex align-items-center bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1 class="display-3 fw-bold text-dark">Gregorio Viola</h1>
+                    <h2 class="h3 text-primary mb-4">CS Student & FullStack Developer</h2>
+                    <div class="d-flex gap-3">
+                        <a href="#projects" class="btn btn-primary btn-lg">Vedi Progetti</a>
+                        <a href="#about" class="btn btn-outline-primary btn-lg">Chi sono</a>
                     </div>
-                    <p>
-                        Quando studiavo letteratura inglese in università pensavo che <em>The Waste
-                            Land</em> di T.S. Eliot fosse complicato. Non avevo ancora incontrato JavaScript.<br>
-                        Ho sempre trovato le lingue affascinanti e intriganti; grazie al mio PC che ha smesso di
-                        funzionare durante una lezione (e al mio portafoglio non in ottima forma) ho scoperto Linux e,
-                        con esso, un nuovo mondo di linguaggi diversi da quelli
-                        <em>naturali</em> a cui ero abituato: i <strong><em>linguaggi di programmazione</em></strong>.
-                        Così, mentre mi laureavo in Lingue Moderne, ho iniziato a smanettarci, insieme
-                        all’inglese e al francese; dopo la laurea, ho trascorso due anni presso <strong>Altea
-                            IN</strong> come Junior ERP Consultant, imparando i processi aziendali e i sistemi ERP; ora
-                        sto frequentando un master in <strong>FullStack Development e AI Agents</strong>, oltre a una
-                        laurea triennale in Informatica, con l’obiettivo di unire le mie competenze linguistiche
-                        con quelle tecniche di uno sviluppatore; ho scoperto che, in fondo, un buon codice non è
-                        poi così diverso da una buona poesia.<br>
-                        La mia scrivania è sempre un po’ affollata di fogli iniziati e bozze a metà, ma il codice sta
-                        finalmente iniziando ad avere senso (come accadde con <em>The Waste Land</em>). Sfoglia pure gli altri fogli per saperne qualcosa in più!
-                    </p>
-                </article>
-            </label>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!--MY SKILLS-->
-        <div class="sheet_wrapper">
-            <input type="radio" id="skills_sheet" name="portfolio_pages" class="sheet_toggle">
-            <label for="skills_sheet" class="page_container">
-                <article id="skills" class="page_content">
-                    <h2>I miei strumenti</h2>
-                    <h3>Linguaggi e competenze</h3>
-                    <div class="tools_grid">
-                        <label for="frontend" class="tools_label">Frontend:</label>
-                        <div class="tools" id="frontend">
-                            <ul>
-                                <li>HTML</li>
-                                <li>CSS - SASS (+Bootstrap)</li>
-                                <li>JavaScript</li>
-                            </ul>
-                        </div>
-                        <label for="backend" class="tools_label">Backend:</label>
-                        <div class="tools" id="backend">
-                            <ul>
-                                <li>Python</li>
-                                <li>C</li>
-                                <li>Bash</li>
-                                <li>SQL</li>
-                            </ul>
-                        </div>
-                        <label class="tools_label" for="tools_and_erp">Altro:</label>
-                        <div class="tools" id="tools_and_erp" id="tools_and_erp">
-                            <ul>
-                                <li>Conoscenza di Linux (Ubuntu, Fedora, Kali)</li>
-                                <li>ERP Infor LN</li>
-                            </ul>
-                        </div>
-                        <label class="tools_label" for="bonus">Inoltre:</label>
-                        <div class="tools" id="bonus">
-                            Quaderni e stilografiche; per quando le cose si fanno <strong>davvero</strong> complicate.
-                        </div>
-                    </div>
-                </article>
-            </label>
-        </div>
-        <!--MY PROJECTS-->
-        <div class="sheet_wrapper">
-            <input type="radio" id="projects_sheet" name="portfolio_pages" class="sheet_toggle">
-            <label for="projects_sheet" class="page_container">
-                <article id="projects" class="page_content">
-                    <h2>I miei progetti</h2>
-                    <h3>Beh, proprio questa pagina web!</h3>
-                    <p>Per ora...<br>
-                        Questa pagina è il mio primo vero progetto. Non c’è ancora molto, ma aggiungerò contenuti man
-                        mano che andrò avanti. In questo momento sto realizzando un programma in C per giocare a go in
-                        ASCII art in una shell bash; altri progetti arriveranno presto!</p>
-                </article>
-            </label>
-        </div>
-
-        <!--CONTACT ME-->
-        <div class="sheet_wrapper">
-            <input type="radio" id="contact_sheet" name="portfolio_pages" class="sheet_toggle" checked>
-            <label for="contact_sheet" class="page_container">
-                <article id="contact_me" class="page_content">
-                    <h2>Contattami</h2>
-                    <h3>Usa questo post-it se vuoi scrivermi qualcosa:</h3>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col">
-                                <div class="card">
-                                    <div class="card-body form_memo">
-                                        <form>
-                                            <div class="mb-3">
-                                                <label for="emailInput" class="form-label">Indirizzo email</label>
-                                                <input type="email" class="form-control" id="emailInput"
-                                                    placeholder="nome@esempio.com" required>
-                                                <div class="form-text">La tua email non lascerà questa scrivania...
-                                                </div>
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="messageInput" class="form-label">Messaggio</label>
-                                                <textarea class="form-control" id="messageInput" rows="4"
-                                                    placeholder="Il tuo messaggio..." required></textarea>
-                                            </div>
-                                            <div class="d-grid">
-                                                <button type="submit" class="btn btn-primary">Invia memo</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
+    <section id="projects" class="py-5">
+        <div class="container py-5">
+            <h2 class="h3 border-start border-4 border-primary ps-3 mb-5">Progetti Selezionati</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm project-card">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="mb-0 text-primary">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-file-earmark-code-fill skill-icon" viewBox="0 0 16 16">
+  <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M6.646 7.646a.5.5 0 1 1 .708.708L5.707 10l1.647 1.646a.5.5 0 0 1-.708.708l-2-2a.5.5 0 0 1 0-.708zm2.708 0 2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 10 8.646 8.354a.5.5 0 1 1 .708-.708"/>
+                                </svg>
+                            </div>
+                            <h5 class="card-title fw-bold">Web Portfolio</h5>
+                            <p class="card-text text-muted small">
+                                Questo portfolio, creato per il master di Start2Impact, è il mio primo progetto.
+                            </p>
+                            <div class="mt-auto">
+                                <span class="badge bg-light text-dark border">HTML</span>
+                                <span class="badge bg-light text-dark border">Sass</span>
+                                <span class="badge bg-light text-dark border">Bootstrap</span>
                             </div>
                         </div>
                     </div>
-                </article>
-            </label>
-        </div>
-    </main>
-
-    <div class="change_lang">
-        <a href="index.html" class="stamp">EN</a>
-        <a href="main-it.html" class="stamp">IT</a>
-    </div>
-
-    <input type="radio" id="reset_all" name="portfolio_pages" class="sheet_toggle">
-
-    <div class="sticky_memo_container">
-        <input type="checkbox" id="memo_toggle" class="memo_checkbox">
-        <label for="memo_toggle" class="sticky_memo">
-            <span class="memo_pin">📌</span>
-            <span class="memo_text">Menu</span>
-            <nav class="memo_nav">
-                <label class="menu_link" for="presentation_sheet">Un po’ di contesto</label>
-                <label class="menu_link" for="skills_sheet">I miei strumenti</label>
-                <label class="menu_link" for="projects_sheet">I miei progetti</label>
-                <label class="menu_link" for="contact_sheet">Contattami</label>
-                <a href="cv_ita.html" target="_blank" rel="noopener noreferrer">Il mio CV</a>
-
-                <label for="reset_all" class="menu_link reset_btn">Riordina scrivania</label>
-            </nav>
-        </label>
-    </div>
-    <footer class="desk_edge">
-        <div class="footer_content">
-            <div class="social_links">
-                <a href="https://github.com/tiredViking" target="_blank" rel="noopener noreferrer" class="social_item">
-                    <span class="icon">Github</span>
-                    <span class="label">Source Code</span>
-                </a>
-                <a href="https://www.linkedin.com/in/gregorio-viola-9b6524264"
-                target="_blank"
-                class="social_item"
-                rel="noopener noreferrer">
-                    <span class="icon">Linkedin</span>
-                    <span class="label">Professional Network</span>
-                </a>
-                <a href="https://gitlab.com/tired_viking" target="_blank" rel="noopener noreferrer" class="social_item">
-                    <span class="icon">Gitlab</span>
-                    <span class="label">Source Code</span>
-                </a>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm project-card">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="mb-0 text-primary"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-javascript skill-icon" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM9.053 7.596v3.127l-.007 1.752q0 .498-.186.752t-.556.263q-.342 0-.528-.234-.185-.234-.185-.684v-.175H6.37v.185q0 .665.253 1.113.255.45.703.674.44.225 1.016.225.88 0 1.406-.498.527-.498.527-1.485l.007-1.752V7.596zm3.808-.108q-.585 0-1.006.244a1.67 1.67 0 0 0-.634.674 2.1 2.1 0 0 0-.225.996q0 .753.293 1.182.303.42.967.732l.469.215q.438.186.625.43.185.244.185.635 0 .478-.166.703-.156.224-.527.224-.361.001-.547-.244-.186-.243-.205-.752h-1.162q.02.996.498 1.524.479.527 1.386.527.909 0 1.417-.518.507-.517.507-1.484 0-.81-.332-1.289t-1.045-.79l-.449-.196q-.39-.166-.556-.381-.166-.214-.166-.576 0-.4.165-.596.177-.195.508-.195.361 0 .508.234.156.234.176.703h1.123q-.03-.976-.498-1.484-.47-.518-1.309-.518"/>
+</svg></div>
+                            <h5 class="card-title fw-bold">Counter Web App</h5>
+                            <p class="card-text text-muted small">Web app creata per il corso JavaScript di Start2Impact, è un'app che permette all'utente di incrementare o ridurre un contatore in base a uno step. L'interfaccia viene creata dinamicamente tramite DOM manipulation con js.</p>
+                            <div class="mt-auto">
+                                <span class="badge bg-light text-dark border">JavaScript</span>
+                                <span class="badge bg-light text-dark border">HTML</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm project-card">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <div class="mb-0 text-primary"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-file-earmark-arrow-up-fill skill-icon" viewBox="0 0 16 16">
+  <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M6.354 9.854a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 8.707V12.5a.5.5 0 0 1-1 0V8.707z"/>
+</svg></div>
+                            <h5 class="card-title fw-bold">Work in Progress</h5>
+                            <p class="card-text text-muted small">I vari progetti verranno aggiunti qui.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </footer>
-</body>
+    </section>
 
+    <section id="about" class="py-5 bg-light about-section">
+        <div class="container py-5">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="fw-bold mb-3">Chi Sono</h2>
+                    <div class="title-separator mx-auto mb-4"></div>
+                    <p class="lead text-secondary">Linguaggio, Logica, e Linux</p>
+                    <p class="text-muted">Laureato in Lingue straniere, in inglese e francese, grazie a un vecchio pc e a Linux inizia la mia avventura nel tech; oggi studio informatica e programmazione fullstack, cercando di unire le competenze linguistiche con quelle tecniche da sviluppatore.</p>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-around">
+                <div class="col-12 col-md-3">
+                    <div class="skill-card">
+                        <h5 class="fw-bold mb-1">Frontend</h5>
+                        <p class="small text-muted mb-0">HTML, CSS, Sass, JS, Bootstrap</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div class="skill-card">
+                        <h5 class="fw-bold mb-1">Backend</h5>
+                        <p class="small text-muted mb-0">Python, SQL, C, Bash</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <div class="skill-card">
+                        <h5 class="fw-bold mb-1">Tools</h5>
+                        <p class="small text-muted mb-0">Git, LaTex, Linux, Infor LN ERP</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-2 bg-white">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 text-center mb-3">
+                    <h2 class="fw-bold">Mettiamoci in contatto</h2>
+                    <p class="text-muted">Hai un progetto in mente o vuoi semplicemente salutarmi?</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form action="#" method="POST" class="row g-3 shadow-sm p-4 rounded border">
+                        <div class="col-md-6">
+                            <label for="nome" class="form-label small fw-bold">Nome</label>
+                            <input type="text" id="nome" name="nome" class="form-control" placeholder="Il tuo nome" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label small fw-bold">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="email@esempio.com" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="messaggio" class="form-label small fw-bold">Messaggio</label>
+                            <textarea id="messaggio" name="messaggio" class="form-control" rows="5" placeholder="Come posso aiutarti?" required></textarea>
+                        </div>
+                        <div class="col-12 text-end">
+                            <button type="submit" class="btn btn-primary px-5 py-2">Invia Messaggio</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+    <footer class="py-4 bg-light border-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="d-flex justify-content-around align-items-center">
+                        <a href="https://github.com/tiredViking" target="_blank" aria-label="GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-github social-icon" viewBox="0 0 16 16" width="40px" height="40px">
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                            </svg>
+                        </a>
+
+                        <a href="https://gitlab.com/tired_viking" target="_blank" class="mx-3" aria-label="GitLab">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-gitlab" viewBox="0 0 16 16" width="40px" height="40px">
+                                <path d="m15.734 8.85.025.067a.28.28 0 0 1-.103.313l-4.835 3.49-1.489 1.077a.28.28 0 0 1-.327 0l-1.489-1.077-4.835-3.49a.28.28 0 0 1-.103-.313l.025-.068a.3.3 0 0 1 .01-.025l3.16-7.759a.3.3 0 0 1 .566 0l1.654 4.056h3.202l1.654-4.056a.3.3 0 0 1 .566 0l3.16 7.759a.3.3 0 0 1 .01.025Z"/>
+                            </svg>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/gregorio-viola-9b6524264" target="_blank" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16" width="40px" height="40px">
+                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.674 0 7.225 0 7.225z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</footer>
+
+</body>
 </html>
