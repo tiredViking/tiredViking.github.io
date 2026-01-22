@@ -24,6 +24,7 @@ Find the live project at: [tiredviking.github.io](https://tiredviking.github.io)
          └── sass/               # Source SCSS  
               ├── main.scss      # main .scss file  
               ├── cv.scss        # scss file for cv pages  
-              ├── namespaces/    # namespaces imported by main.scss and cv.scss  
+              ├── namespaces/    # namespaces imported by main.scss and cv.scss
+              ├── purged_css/    # contains the purged version of compiled scss files; these are the ones used in the final html files
               └── compiled_sass/ # css files compiled from main.scss and cv.scss  
 ```
