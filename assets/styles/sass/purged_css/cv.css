@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import url("https://cdn.jsdelivr.net/npm/@fontsource/latin-modern-roman@5.0.0/index.css");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -973,7 +972,6 @@ html {
   box-sizing: content-box;
 }
 html body {
-  font-family: "Latin Modern Sans", sans-serif;
   background-color: #f8f9fa;
 }
 html body #home, html body #skills, html body #home_ita, html body #skills_ita {

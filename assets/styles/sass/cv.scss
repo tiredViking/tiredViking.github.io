@@ -18,14 +18,10 @@
 @import "../../../node_modules/bootstrap/scss/utilities";
 @import "../../../node_modules/bootstrap/scss/utilities/api";   // Utility classes (d-flex, py-5, mb-3, text-*, bg-*, etc)
 
-/*import latin modern font*/
-@import url('https://cdn.jsdelivr.net/npm/@fontsource/latin-modern-roman@5.0.0/index.css');
-
 html {
   box-sizing: content-box;
 
   body {
-    font-family: "Latin Modern Sans", sans-serif;
     background-color: $light;
     
     #home, #skills, #home_ita, #skills_ita {
