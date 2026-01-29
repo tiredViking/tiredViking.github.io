@@ -1,0 +1,23 @@
+{
+  "name": "tiredviking.github.io",
+  "version": "1.0.0",
+  "description": "Personal Portfolio project developed for **Start2Impact** Fullstack Development Master.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiredViking/tiredViking.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tiredViking/tiredViking.github.io/issues"
+  },
+  "homepage": "https://github.com/tiredViking/tiredViking.github.io#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
+}

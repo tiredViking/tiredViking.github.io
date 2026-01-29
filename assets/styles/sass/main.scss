@@ -1,6 +1,5 @@
 @charset 'utf-8';
 
-@use "namespaces/variables";
 @use "namespaces/mixins";
 @use "namespaces/navbar";
 @use "namespaces/lang";
@@ -9,10 +8,26 @@
 @use "namespaces/form";
 @use "namespaces/projects";
 
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "namespaces/bootstrap_override";                     // my custom remapped colors
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/variables-dark";
+@import "../../../node_modules/bootstrap/scss/maps";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/root";
+@import "../../../node_modules/bootstrap/scss/reboot";          // CSS reset
+@import "../../../node_modules/bootstrap/scss/type";            // Typography (h1-h6, lead, display-*, small, etc)
+@import "../../../node_modules/bootstrap/scss/containers";      // .container
+@import "../../../node_modules/bootstrap/scss/grid";            // .row, .col-*, .g-* (gap classes)
+@import "../../../node_modules/bootstrap/scss/buttons";         // .btn, .btn-primary, .btn-outline-*, .btn-lg
+@import "../../../node_modules/bootstrap/scss/forms";           // .form-control, .form-label
+@import "../../../node_modules/bootstrap/scss/card";            // .card, .card-body, .card-title, .card-text
+@import "../../../node_modules/bootstrap/scss/badge";           // .badge
+@import "../../../node_modules/bootstrap/scss/utilities";
+@import "../../../node_modules/bootstrap/scss/utilities/api";   // Utility classes (d-flex, py-5, mb-3, text-*, bg-*, etc)
+
 // General
 body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    color: #333;
     scroll-behavior: smooth;
 }
 
@@ -23,5 +38,5 @@ body {
 
 // Utility Classes (Flex/Grid helpers)
 .border-start {
-    border-color: variables.$primary-color;
+    border-color: $primary;
 }

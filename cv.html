@@ -1,170 +1,277 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gregorio Viola - CV</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
-    <link rel="manifest" href="assets/img/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/img/site.webmanifest" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/styles/sass/purged_css/cv.css">
-</head>
+    <link rel="stylesheet" href="assets/styles/sass/purged_css/cv.css" />
+    <link rel="stylesheet" href="assets/styles/sass/purged_css/main.css" />
+  </head>
 
-<body class="bg-light py-5">
+  <body class="bg-light">
+    <header>
+      <nav class="custom-nav">
+        <div
+          class="container d-flex justify-content-between align-items-center py-2"
+        >
+          <a class="navbar-brand fw-bold text-primary" href="#">
+            <span class="border border-primary border-2 px-2 py-1">GV</span>
+          </a>
+
+          <input type="checkbox" id="menu-toggle" class="d-none" />
+          <label for="menu-toggle" class="menu-button-container d-lg-none">
+            <div class="hamburger"></div>
+          </label>
+
+          <ul class="nav-menu list-unstyled m-0">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#work_experience">Work Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="index.html">Portfolio</a></li>
+            <li class="lang-item">
+              <a href="cv_ita.html">IT</a> |
+              <a href="cv.html" class="active">EN</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
     <main>
-    <div class="container bg-white shadow-sm p-4 p-md-5 rounded">
-        <header class="border-bottom pb-4 mb-5">
-            <h1 class="display-4 fw-bold text-primary">Gregorio Viola</h1>
-            <p class="lead text-secondary">CS Student & FullStack Developer | Former ERP Consultant</p>
-        </header>
-
+      <div class="container bg-white shadow-sm p-3 p-md-5 rounded" id="home">
+        <h1 class="display-4 fw-bold text-primary">Gregorio Viola</h1>
+        <p class="lead text-secondary">
+          CS Student & FullStack Developer | Former ERP Consultant
+        </p>
         <div class="row g-5">
-            <div class="col-lg-8">
+          <div class="col-lg-8">
+            <section class="mb-5">
+              <h2 class="h3 border-start border-4 border-primary ps-3 mb-3">
+                Presentation
+              </h2>
+              <p class="text-muted">
+                <strong>Computer Science</strong> bachelor at UNIUPO, and
+                currently following a master in
+                <strong> Fullstack development</strong>, with a background in
+                languages and a deep passion for programming. In the last 2
+                years I have been a <strong>ERP Consultant</strong> at Altea IN,
+                specializing in Infor LN implementations. During this period I
+                have gained proficiency in ERP implementation, multilingual
+                technical documentation, and problem-solving. I
+                <strong>graduated in 2023</strong> with a degree in
+                <strong>Modern Foreign Languages</strong> from the University of
+                Vercelli, specializing in English and French, with a specific
+                focus on their respective literatures and linguistics. During my
+                university studies, I explored various aspects of both
+                languages, acquiring both the ability to perform general,
+                literary, and business translations, as well as the potential to
+                teach both languages. In July 2024, I participated in an IFTS
+                higher technical specialization course, promoted by Altea, in
+                techniques for economic-financial administration. During this
+                one-year program, while working in Altea alongside a mentor on
+                various projects I received training on the INFOR LN management
+                system and on various topics necessary for daily operations,
+                such as accounting, project management, business processes, and
+                others, taking part in many projects for various customers, both
+                on-site and remotely. I currently am a Computer Science bachelor
+                at the University of Eastern Piedmont, where I enrolled to
+                deepen my passion and understanding about the more theoretical
+                aspects of programming, cybersecurity, system administration,
+                and machine learning; furthermore, in order to gain more
+                practical and hands-on knowledge, I have recently took part in a
+                course about fullstack development and how to build AI agents,
+                where I am testing and refining my skills on various small
+                projects, such as creating web pages, managing databases, and
+                creating AI agents.
+              </p>
+            </section>
 
-                <section class="mb-5">
-                    <h2 class="h3 border-start border-4 border-primary ps-3 mb-3">Presentation</h2>
-                    <p class="text-muted" style="text-align: justify;">
-                    <strong>Computer Science</strong> bachelor at UNIUPO, and currently following a master in <strong>
-                    Fullstack development</strong>, with a background in languages and a deep passion for programming.
-                    In the last 2 years I have been a <strong>ERP Consultant</strong> at Altea IN, specializing
-                    in Infor LN implementations. During this period I have gained proficiency in
-                    ERP implementation, multilingual technical documentation, and problem-solving.
-                    I <strong>graduated in 2023</strong> with a degree in <strong>Modern Foreign Languages</strong> from the University of Vercelli, specializing in English and French, with a specific focus on
-                    their respective literatures and linguistics. During my university studies, I explored
-                    various aspects of both languages, acquiring both the ability to perform general,
-                    literary, and business translations, as well as the potential to teach both languages. In
-                    July 2024, I participated in an IFTS higher technical specialization course, promoted
-                    by Altea, in techniques for economic-financial administration. During this one-year program, while working in Altea alongside a mentor on various projects I received training on the INFOR LN management system and on various topics necessary for daily operations, such as accounting, project management, business processes, and others, taking part in many projects
-                    for various customers, both on-site and remotely. I currently am a Computer Science
-                    bachelor at the University of Eastern Piedmont, where I enrolled to deepen my
-                    passion and understanding about the more theoretical aspects of programming,
-                    cybersecurity, system administration, and machine learning; furthermore, in order to
-                    gain more practical and hands-on knowledge, I have recently took part in a course
-                    about fullstack development and how to build AI agents, where I am testing and
-                    refining my skills on various small projects, such as creating web pages, managing
-                    databases, and creating AI agents.</p>
-                </section>
+            <section class="mb-5">
+              <h2
+                class="h3 border-start border-4 border-primary ps-3 mb-4"
+                id="work_experience"
+              >
+                Work Experience
+              </h2>
 
-                <section class="mb-5">
-                    <h2 class="h3 border-start border-4 border-primary ps-3 mb-4">Work Experience</h2>
+              <div class="mb-4">
+                <div
+                  class="d-flex justify-content-between align-items-baseline"
+                >
+                  <h5 class="fw-bold mb-0">Junior ERP Consultant</h5>
+                  <span class="badge bg-secondary">2024 - 2025</span>
+                </div>
+                <p class="text-primary fw-semibold mb-1">Altea IN, Milan</p>
+                <p class="small text-muted mb-2">
+                  Junior finance consultant for the Infor LN ERP system.
+                </p>
+                <ul class="small text-muted">
+                  <li>
+                    <strong>Marchesini Group S.p.A.</strong>: Technical
+                    specification gathering and environment implementation.
+                  </li>
+                  <li>
+                    <strong>Monteferro S.p.A.</strong>: Intrastat and Fixed
+                    Assets setup in LN Cloud.
+                  </li>
+                  <li>
+                    <strong>DAB Pumps S.p.A.</strong>: implementation and
+                    testing of the Intrastat module in LN Cloud and the Italian
+                    Unique Certification module; migration of fixed assets from
+                    the old environment to the new production environment
+                  </li>
+                  <li>
+                    <strong>Pedrali S.p.A.</strong>: implementation and testing
+                    of the Intrastat module in LN Cloud and the Italian Unique
+                    Certification module.
+                  </li>
+                </ul>
+              </div>
 
-                    <div class="mb-4">
-                        <div class="d-flex justify-content-between align-items-baseline">
-                            <h5 class="fw-bold mb-0">Junior ERP Consultant</h5>
-                            <span class="badge bg-secondary">2024 - 2025</span>
-                        </div>
-                        <p class="text-primary fw-semibold mb-1">Altea IN, Milan</p>
-                        <p class="small text-muted mb-2">Junior finance consultant for the Infor LN ERP system.</p>
-                        <ul class="small text-muted">
-                            <li><strong>Marchesini Group S.p.A.</strong>: Technical specification gathering and
-                                environment implementation.</li>
-                            <li><strong>Monteferro S.p.A.</strong>: Intrastat and Fixed Assets setup in LN Cloud.</li>
-                            <li><strong>DAB Pumps S.p.A.</strong>: implementation and testing of the Intrastat module in LN Cloud and the Italian Unique Certification module; migration of fixed assets from the old environment to the new production environment</li>
-                            <li><strong>Pedrali S.p.A.</strong>: implementation and testing of the Intrastat module in LN Cloud and the
-                            Italian Unique Certification module.</li>
-                        </ul>
-                    </div>
+              <div class="mb-4">
+                <div
+                  class="d-flex justify-content-between align-items-baseline"
+                >
+                  <h5 class="fw-bold mb-0">Substitute French Teacher</h5>
+                  <span class="badge bg-secondary">2022</span>
+                </div>
+                <p class="text-primary fw-semibold mb-0">Local Middle School</p>
+              </div>
+            </section>
 
-                    <div class="mb-4">
-                        <div class="d-flex justify-content-between align-items-baseline">
-                            <h5 class="fw-bold mb-0">Substitute French Teacher</h5>
-                            <span class="badge bg-secondary">2022</span>
-                        </div>
-                        <p class="text-primary fw-semibold mb-0">Local Middle School</p>
-                    </div>
-                </section>
+            <section>
+              <h2
+                class="h3 border-start border-4 border-primary ps-3 mb-4"
+                id="education"
+              >
+                Education
+              </h2>
+              <div class="row row-cols-1 g-3">
+                <div class="col">
+                  <h6 class="fw-bold mb-0">B.S. Computer Science</h6>
+                  <p class="mb-0 small">
+                    University of Eastern Piedmont (UNIUPO)
+                  </p>
+                  <small class="text-muted">2025 - Ongoing</small>
+                </div>
+                <div class="col">
+                  <h6 class="fw-bold mb-0">Master</h6>
+                  <p class="mb-0 small">Start2Impact</p>
+                  <small class="text-muted">2025 - Ongoing</small>
+                </div>
+                <div class="col">
+                  <h6 class="fw-bold mb-0">
+                    Post-secondary Qualification Certificate of specialisation
+                  </h6>
+                  <p class="mb-0 small">IFOA, Milan</p>
+                  <small class="text-muted">2025</small>
+                </div>
+                <div class="col">
+                  <h6 class="fw-bold mb-0">
+                    B.A. Modern Foreign Languages (106/110)
+                  </h6>
+                  <p class="mb-0 small">
+                    University of Eastern Piedmont (UNIUPO)
+                  </p>
+                  <small class="text-muted">2019 - 2023</small>
+                </div>
+              </div>
+            </section>
+          </div>
 
-                <section class="mb-5">
-                    <h2 class="h3 border-start border-4 border-primary ps-3 mb-4">Education</h2>
-                    <div class="row row-cols-1 g-3">
-                        <div class="col">
-                            <h6 class="fw-bold mb-0">B.S. Computer Science</h6>
-                            <p class="mb-0 small">University of Eastern Piedmont (UNIUPO)</p>
-                            <small class="text-muted">2025 - Ongoing</small>
-                        </div>
-                        <div class="col">
-                            <h6 class="fw-bold mb-0">Master</h6>
-                            <p class="mb-0 small">Start2Impact</p>
-                            <small class="text-muted">2025 - Ongoing</small>
-                        </div>
-                        <div class="col">
-                            <h6 class="fw-bold mb-0">Post-secondary Qualification Certificate of specialisation</h6>
-                            <p class="mb-0 small">IFOA, Milan</p>
-                            <small class="text-muted">2025</small>
-                        </div>
-                        <div class="col">
-                            <h6 class="fw-bold mb-0">B.A. Modern Foreign Languages (106/110)</h6>
-                            <p class="mb-0 small">University of Eastern Piedmont (UNIUPO)</p>
-                            <small class="text-muted">2019 - 2023</small>
-                        </div>
-                    </div>
-                </section>
+          <section class="col-lg-4" id="skills">
+            <div class="p-4 bg-light rounded mb-4">
+              <h2 class="h5 fw-bold">Digital Skills</h2>
+              <div class="mb-3">
+                <small class="text-uppercase fw-bold text-muted d-block mb-1"
+                  >Frontend</small
+                >
+                <ul>
+                  <li class="badge border text-dark fw-normal">HTML</li>
+                  <li class="badge border text-dark fw-normal">CSS</li>
+                  <li class="badge border text-dark fw-normal">JavaScript</li>
+                  <li class="badge border text-dark fw-normal">Sass</li>
+                </ul>
+              </div>
+              <div class="mb-3">
+                <small class="text-uppercase fw-bold text-muted d-block mb-1"
+                  >Backend</small
+                >
+                <ul>
+                  <li class="badge border text-dark fw-normal">C</li>
+                  <li class="badge border text-dark fw-normal">Python</li>
+                  <li class="badge border text-dark fw-normal">SQL</li>
+                </ul>
+              </div>
+              <div>
+                <small class="text-uppercase fw-bold text-muted d-block mb-1"
+                  >Others</small
+                >
+                <ul>
+                  <li class="badge border text-dark fw-normal">
+                    Linux (Fedora, Kali, Ubuntu)
+                  </li>
+                  <li class="badge border text-dark fw-normal">Infor LN ERP</li>
+                  <li class="badge border text-dark fw-normal">
+                      Git
+                  </li>
+                  <li class="badge border text-dark fw-normal">
+                      LaTeX
+                  </li>
+                </ul>
+              </div>
             </div>
 
-            <div class="col-lg-4">
-
-                <div class="p-4 bg-light rounded mb-4">
-                    <h2 class="h5 fw-bold mb-3">Digital Skills</h2>
-                    <div class="mb-3">
-                        <small class="text-uppercase fw-bold text-muted d-block mb-1">Frontend</small>
-                        <ul>
-                        <li class="badge border text-dark fw-normal">HTML</li>
-                        <li class="badge border text-dark fw-normal">CSS</li>
-                        <li class="badge border text-dark fw-normal">JavaScript</li>
-                        <li class="badge border text-dark fw-normal">Sass</li>
-                        </ul>
-                    </div>
-                    <div class="mb-3">
-                        <small class="text-uppercase fw-bold text-muted d-block mb-1">Backend</small>
-                        <ul>
-                        <li class="badge border text-dark fw-normal">C</li>
-                        <li class="badge border text-dark fw-normal">Python</li>
-                        <li class="badge border text-dark fw-normal">SQL</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <small class="text-uppercase fw-bold text-muted d-block mb-1">Others</small>
-                        <ul>
-                        <li class="badge border text-dark fw-normal">Linux (Fedora, Kali)</li>
-                        <li class="badge border text-dark fw-normal">Infor LN ERP</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="p-4 bg-light rounded mb-4">
-                    <h2 class="h5 fw-bold mb-3">Languages</h2>
-                    <ul class="list-unstyled mb-0">
-                        <li class="d-flex justify-content-between mb-2">
-                            <span>Italian</span> <span class="text-muted small">Native</span>
-                        </li>
-                        <li class="d-flex justify-content-between mb-2">
-                            <span>English</span> <span class="text-muted small">C1 Fluent</span>
-                        </li>
-                        <li class="d-flex justify-content-between">
-                            <span>French</span> <span class="text-muted small">C1 Fluent</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="p-4 bg-light rounded">
-                    <h2 class="h5 fw-bold mb-3">Soft Skills</h2>
-                    <ul class="small text-muted ps-3">
-                        <li>Problem Solving & Adaptability</li>
-                        <li>Multilingual Communication</li>
-                        <li>Independent & Team Learner</li>
-                    </ul>
-                </div>
-
+            <div class="p-4 bg-light rounded mb-4">
+              <h2 class="h5 fw-bold mb-3">Languages</h2>
+              <ul class="list-unstyled mb-0">
+                <li class="d-flex justify-content-between mb-2">
+                  <span>Italian</span>
+                  <span class="text-muted small">Native</span>
+                </li>
+                <li class="d-flex justify-content-between mb-2">
+                  <span>English</span>
+                  <span class="text-muted small">C1 Fluent</span>
+                </li>
+                <li class="d-flex justify-content-between">
+                  <span>French</span>
+                  <span class="text-muted small">C1 Fluent</span>
+                </li>
+              </ul>
             </div>
+
+            <div class="p-4 bg-light rounded">
+              <h2 class="h5 fw-bold mb-3">Soft Skills</h2>
+              <ul class="list-unstyled mb-0">
+                <li>Problem Solving & Adaptability</li>
+                <li>Multilingual Communication</li>
+                <li>Independent & Team Learner</li>
+              </ul>
+            </div>
+          </section>
         </div>
-    </div>
-</main>
-</body>
-
+      </div>
+    </main>
+  </body>
 </html>
