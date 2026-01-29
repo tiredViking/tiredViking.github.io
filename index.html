@@ -1,206 +1,370 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gregorio Viola's Portfolio, CS Student and FullStack Developer.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Gregorio Viola's Portfolio, CS Student and FullStack Developer."
+    />
     <title>Gregorio Viola | FullStack Developer Portfolio</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
-    <link rel="manifest" href="assets/img/site.webmanifest">
-    <link rel="stylesheet" href="assets/styles/sass/purged_css/main.css">
-</head>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/img/site.webmanifest" />
+    <link rel="stylesheet" href="assets/styles/sass/purged_css/main.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav class="custom-nav">
-            <div class="container d-flex justify-content-between align-items-center py-2">
-                <a class="navbar-brand fw-bold text-primary" href="#">
-                    <span class="border border-primary border-2 px-2 py-1">GV</span>
-                </a>
+      <nav class="custom-nav">
+        <div
+          class="container d-flex justify-content-between align-items-center py-2"
+        >
+          <a class="navbar-brand fw-bold text-primary" href="#">
+            <span class="border border-primary border-2 px-2 py-1">GV</span>
+          </a>
 
-                <input type="checkbox" id="menu-toggle" class="d-none">
-                <label for="menu-toggle" class="menu-button-container d-lg-none">
-                    <div class="hamburger"></div>
-                </label>
+          <input type="checkbox" id="menu-toggle" class="d-none" />
+          <label for="menu-toggle" class="menu-button-container d-lg-none">
+            <div class="hamburger"></div>
+          </label>
 
-                <ul class="nav-menu list-unstyled m-0">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#contact" class="btn-primary-custom">Contact</a></li>
-                    <li><a href="cv.html">My CV</a></li>
-                    <li class="lang-item">
-                        <a href="main-it.html" rel="noopener noreferrer">IT</a> | <a  class="active" href="index.html" rel="noopener noreferrer">EN</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+          <ul class="nav-menu list-unstyled m-0">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#contact" class="btn-primary-custom">Contact</a></li>
+            <li><a href="cv.html">My CV</a></li>
+            <li class="lang-item">
+              <a href="main-it.html" rel="noopener noreferrer">IT</a> |
+              <a class="active" href="index.html" rel="noopener noreferrer"
+                >EN</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <section id="home" class="hero-section d-flex align-items-center bg-light py-5">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-7">
-                        <h1 class="display-3 fw-bold text-dark">Gregorio Viola</h1>
-                        <h2 class="h3 text-primary mb-4">CS Student & FullStack Developer</h2>
-                        <div class="d-flex gap-3">
-                            <a href="#projects" class="btn btn-primary btn-lg">View Projects</a>
-                            <a href="#about" class="btn btn-outline-primary btn-lg">About Me</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="projects" class="py-5">
-            <div class="container py-5">
-                <h2 class="h3 border-start border-4 border-primary ps-3 mb-5">Selected Projects</h2>
-                <div class="row g-4">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card h-100 border-0 shadow-sm project-card">
-                            <div class="card-body p-4 d-flex flex-column">
-                                <div class="mb-0 text-primary">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-file-earmark-code-fill skill-icon" viewBox="0 0 16 16">
-      <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M6.646 7.646a.5.5 0 1 1 .708.708L5.707 10l1.647 1.646a.5.5 0 0 1-.708.708l-2-2a.5.5 0 0 1 0-.708zm2.708 0 2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 10 8.646 8.354a.5.5 0 1 1 .708-.708"/>
-                                    </svg>
-                                </div>
-                                <h5 class="card-title fw-bold">Web Portfolio</h5>
-                                <p class="card-text text-muted small">
-                                    This portfolio, created for the Start2Impact master's program, is my first project.
-                                </p>
-                                <div class="mt-auto">
-                                    <span class="badge bg-light text-dark border">HTML</span>
-                                    <span class="badge bg-light text-dark border">Sass</span>
-                                    <span class="badge bg-light text-dark border">Bootstrap</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card h-100 border-0 shadow-sm project-card">
-                            <div class="card-body p-4 d-flex flex-column">
-                                <div class="mb-0 text-primary"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-javascript skill-icon" viewBox="0 0 16 16">
-      <path fill-rule="evenodd" d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM9.053 7.596v3.127l-.007 1.752q0 .498-.186.752t-.556.263q-.342 0-.528-.234-.185-.234-.185-.684v-.175H6.37v.185q0 .665.253 1.113.255.45.703.674.44.225 1.016.225.88 0 1.406-.498.527-.498.527-1.485l.007-1.752V7.596zm3.808-.108q-.585 0-1.006.244a1.67 1.67 0 0 0-.634.674 2.1 2.1 0 0 0-.225.996q0 .753.293 1.182.303.42.967.732l.469.215q.438.186.625.43.185.244.185.635 0 .478-.166.703-.156.224-.527.224-.361.001-.547-.244-.186-.243-.205-.752h-1.162q.02.996.498 1.524.479.527 1.386.527.909 0 1.417-.518.507-.517.507-1.484 0-.81-.332-1.289t-1.045-.79l-.449-.196q-.39-.166-.556-.381-.166-.214-.166-.576 0-.4.165-.596.177-.195.508-.195.361 0 .508.234.156.234.176.703h1.123q-.03-.976-.498-1.484-.47-.518-1.309-.518"/>
-    </svg></div>
-                                <h5 class="card-title fw-bold">Counter Web App</h5>
-                                <p class="card-text text-muted small">Web app created for the Start2Impact JavaScript course, this app allows the user to increment or decrement a counter based on a step. The interface is created dynamically through DOM manipulation with JS.You can find it at <a target="_blank" rel="noopener noreferrer" href="https://tiredviking.github.io/counter/">tiredviking.github.io/counter/</a>.</p>
-                                <div class="mt-auto">
-                                    <span class="badge bg-light text-dark border">JavaScript</span>
-                                    <span class="badge bg-light text-dark border">HTML</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card h-100 border-0 shadow-sm project-card">
-                            <div class="card-body p-4 d-flex flex-column">
-                                <div class="mb-0 text-primary"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-file-earmark-arrow-up-fill skill-icon" viewBox="0 0 16 16">
-      <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M6.354 9.854a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 8.707V12.5a.5.5 0 0 1-1 0V8.707z"/>
-    </svg></div>
-                                <h5 class="card-title fw-bold">Work in Progress</h5>
-                                <p class="card-text text-muted small">Various projects will be added here.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="py-5 bg-light about-section">
-            <div class="container py-5">
-                <div class="row justify-content-center mb-5">
-                    <div class="col-lg-8 text-center">
-                        <h2 class="fw-bold mb-3">About Me</h2>
-                        <div class="title-separator mx-auto mb-4"></div>
-                        <p class="lead text-secondary">Language, Logic, and Linux</p>
-                        <p class="text-muted">Graduated in Foreign Languages, specifically English and French, my adventure in tech began thanks to an old PC and Linux; today I study computer science and full-stack programming, aiming to combine linguistic skills with technical developer expertise.</p>
-                    </div>
-                </div>
-
-                <div class="row g-4 justify-content-around">
-                    <div class="col-12 col-md-3">
-                        <div class="skill-card">
-                            <h5 class="fw-bold mb-1">Frontend</h5>
-                            <p class="small text-muted mb-0">HTML, CSS, Sass, JS, Bootstrap</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-3">
-                        <div class="skill-card">
-                            <h5 class="fw-bold mb-1">Backend</h5>
-                            <p class="small text-muted mb-0">Python, SQL, C, Bash</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-3">
-                        <div class="skill-card">
-                            <h5 class="fw-bold mb-1">Tools</h5>
-                            <p class="small text-muted mb-0">Git, LaTeX, Linux, Infor LN ERP</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="py-2 bg-white">
-            <div class="container py-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6 text-center mb-3">
-                        <h2 class="fw-bold">Get in touch</h2>
-                        <p class="text-muted">Do you have a project in mind or just want to say hello?</p>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-lg-8">
-                        <form action="#" method="POST" class="row g-3 shadow-sm p-4 rounded border">
-                            <div class="col-md-6">
-                                <label for="nome" class="form-label small fw-bold">Name</label>
-                                <input type="text" id="nome" name="nome" class="form-control" placeholder="Your name" required>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="email" class="form-label small fw-bold">Email</label>
-                                <input type="email" id="email" name="email" class="form-control" placeholder="email@example.com" required>
-                            </div>
-                            <div class="col-12">
-                                <label for="messaggio" class="form-label small fw-bold">Message</label>
-                                <textarea id="messaggio" name="messaggio" class="form-control" rows="5" placeholder="How can I help you?" required></textarea>
-                            </div>
-                            <div class="col-12 text-end">
-                                <button type="submit" class="btn btn-primary px-5 py-2">Send Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-</main>
-    <footer class="py-4 bg-light border-top">
+      <section
+        id="home"
+        class="hero-section d-flex align-items-center bg-light py-5"
+      >
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="d-flex justify-content-around align-items-center">
-                        <a href="https://github.com/tiredViking" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-github social-icon" viewBox="0 0 16 16" width="40px" height="40px">
-                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-                            </svg>
-                        </a>
-
-                        <a href="https://gitlab.com/tired_viking" rel="noopener noreferrer" target="_blank" class="mx-3" aria-label="GitLab" rel="noopener noreferrer">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-gitlab" viewBox="0 0 16 16" width="40px" height="40px">
-                                <path d="m15.734 8.85.025.067a.28.28 0 0 1-.103.313l-4.835 3.49-1.489 1.077a.28.28 0 0 1-.327 0l-1.489-1.077-4.835-3.49a.28.28 0 0 1-.103-.313l.025-.068a.3.3 0 0 1 .01-.025l3.16-7.759a.3.3 0 0 1 .566 0l1.654 4.056h3.202l1.654-4.056a.3.3 0 0 1 .566 0l3.16 7.759a.3.3 0 0 1 .01.025Z"/>
-                            </svg>
-                        </a>
-
-                        <a href="https://www.linkedin.com/in/gregorio-viola-9b6524264" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16" width="40px" height="40px">
-                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.674 0 7.225 0 7.225z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+          <div class="row align-items-center">
+            <div class="col-lg-7">
+              <h1 class="display-3 fw-bold text-dark">Gregorio Viola</h1>
+              <h2 class="h3 text-primary mb-4">
+                CS Student & FullStack Developer
+              </h2>
+              <div class="d-flex gap-3">
+                <a href="#projects" class="btn btn-primary btn-lg"
+                  >View Projects</a
+                >
+                <a href="#about" class="btn btn-outline-primary btn-lg"
+                  >About Me</a
+                >
+              </div>
             </div>
+          </div>
         </div>
-</footer>
+      </section>
+      <section id="projects" class="py-5">
+        <div class="container py-5">
+          <h2 class="h3 border-start border-4 border-primary ps-3 mb-5">
+            Selected Projects
+          </h2>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 border-0 shadow-sm project-card">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="mb-0 text-primary">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      class="bi bi-file-earmark-code-fill skill-icon"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M6.646 7.646a.5.5 0 1 1 .708.708L5.707 10l1.647 1.646a.5.5 0 0 1-.708.708l-2-2a.5.5 0 0 1 0-.708zm2.708 0 2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 10 8.646 8.354a.5.5 0 1 1 .708-.708"
+                      />
+                    </svg>
+                  </div>
+                  <h5 class="card-title fw-bold">Web Portfolio</h5>
+                  <p class="card-text text-muted small">
+                    This portfolio, created for the Start2Impact master's
+                    program, is my first project.
+                  </p>
+                  <div class="mt-auto">
+                    <span class="badge bg-light text-dark border">HTML</span>
+                    <span class="badge bg-light text-dark border">Sass</span>
+                    <span class="badge bg-light text-dark border"
+                      >Bootstrap</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 border-0 shadow-sm project-card">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="mb-0 text-primary">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      class="bi bi-javascript skill-icon"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zM9.053 7.596v3.127l-.007 1.752q0 .498-.186.752t-.556.263q-.342 0-.528-.234-.185-.234-.185-.684v-.175H6.37v.185q0 .665.253 1.113.255.45.703.674.44.225 1.016.225.88 0 1.406-.498.527-.498.527-1.485l.007-1.752V7.596zm3.808-.108q-.585 0-1.006.244a1.67 1.67 0 0 0-.634.674 2.1 2.1 0 0 0-.225.996q0 .753.293 1.182.303.42.967.732l.469.215q.438.186.625.43.185.244.185.635 0 .478-.166.703-.156.224-.527.224-.361.001-.547-.244-.186-.243-.205-.752h-1.162q.02.996.498 1.524.479.527 1.386.527.909 0 1.417-.518.507-.517.507-1.484 0-.81-.332-1.289t-1.045-.79l-.449-.196q-.39-.166-.556-.381-.166-.214-.166-.576 0-.4.165-.596.177-.195.508-.195.361 0 .508.234.156.234.176.703h1.123q-.03-.976-.498-1.484-.47-.518-1.309-.518"
+                      />
+                    </svg>
+                  </div>
+                  <h5 class="card-title fw-bold">Counter Web App</h5>
+                  <p class="card-text text-muted small">
+                    Web app created for the Start2Impact JavaScript course, this
+                    app allows the user to increment or decrement a counter
+                    based on a step. The interface is created dynamically
+                    through DOM manipulation with JS.You can find it at
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://tiredviking.github.io/counter/"
+                      >tiredviking.github.io/counter/</a
+                    >.
+                  </p>
+                  <div class="mt-auto">
+                    <span class="badge bg-light text-dark border"
+                      >JavaScript</span
+                    >
+                    <span class="badge bg-light text-dark border">HTML</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="card h-100 border-0 shadow-sm project-card">
+                <div class="card-body p-4 d-flex flex-column">
+                  <div class="mb-0 text-primary">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      class="bi bi-file-earmark-arrow-up-fill skill-icon"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M6.354 9.854a.5.5 0 0 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 8.707V12.5a.5.5 0 0 1-1 0V8.707z"
+                      />
+                    </svg>
+                  </div>
+                  <h5 class="card-title fw-bold">Work in Progress</h5>
+                  <p class="card-text text-muted small">
+                    Various projects will be added here.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-</body>
+      <section id="about" class="py-5 bg-light about-section">
+        <div class="container py-5">
+          <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 text-center">
+              <h2 class="fw-bold mb-3">About Me</h2>
+              <div class="title-separator mx-auto mb-4"></div>
+              <p class="lead text-secondary">Language, Logic, and Linux</p>
+              <p class="text-muted">
+                Graduated in Foreign Languages, specifically English and French,
+                my adventure in tech began thanks to an old PC and Linux; today
+                I study computer science and full-stack programming, aiming to
+                combine linguistic skills with technical developer expertise.
+              </p>
+            </div>
+          </div>
+
+          <div class="row g-4 justify-content-around">
+            <div class="col-12 col-md-3">
+              <div class="skill-card">
+                <h5 class="fw-bold mb-1">Frontend</h5>
+                <p class="small text-muted mb-0">
+                  HTML, CSS, Sass, JS, Bootstrap
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-md-3">
+              <div class="skill-card">
+                <h5 class="fw-bold mb-1">Backend</h5>
+                <p class="small text-muted mb-0">Python, SQL, C, Bash</p>
+              </div>
+            </div>
+            <div class="col-12 col-md-3">
+              <div class="skill-card">
+                <h5 class="fw-bold mb-1">Tools</h5>
+                <p class="small text-muted mb-0">
+                  Git, LaTeX, Linux, Infor LN ERP
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-2 bg-white">
+        <div class="container py-5">
+          <div class="row justify-content-center">
+            <div class="col-lg-6 text-center mb-3">
+              <h2 class="fw-bold">Get in touch</h2>
+              <p class="text-muted">
+                Do you have a project in mind or just want to say hello?
+              </p>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <form
+                action="#"
+                method="POST"
+                class="row g-3 shadow-sm p-4 rounded border"
+              >
+                <div class="col-md-6">
+                  <label for="nome" class="form-label small fw-bold"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    class="form-control"
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label small fw-bold"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="email@example.com"
+                    required
+                  />
+                </div>
+                <div class="col-12">
+                  <label for="messaggio" class="form-label small fw-bold"
+                    >Message</label
+                  >
+                  <textarea
+                    id="messaggio"
+                    name="messaggio"
+                    class="form-control"
+                    rows="5"
+                    placeholder="How can I help you?"
+                    required
+                  ></textarea>
+                </div>
+                <div class="col-12 text-end">
+                  <button type="submit" class="btn btn-primary px-5 py-2">
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="py-4 bg-light border-top">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="d-flex justify-content-around align-items-center">
+              <a
+                href="https://github.com/tiredViking"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  class="bi bi-github social-icon"
+                  viewBox="0 0 16 16"
+                  width="40px"
+                  height="40px"
+                >
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://gitlab.com/tired_viking"
+                rel="noopener noreferrer"
+                target="_blank"
+                class="mx-3"
+                aria-label="GitLab"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  class="bi bi-gitlab"
+                  viewBox="0 0 16 16"
+                  width="40px"
+                  height="40px"
+                >
+                  <path
+                    d="m15.734 8.85.025.067a.28.28 0 0 1-.103.313l-4.835 3.49-1.489 1.077a.28.28 0 0 1-.327 0l-1.489-1.077-4.835-3.49a.28.28 0 0 1-.103-.313l.025-.068a.3.3 0 0 1 .01-.025l3.16-7.759a.3.3 0 0 1 .566 0l1.654 4.056h3.202l1.654-4.056a.3.3 0 0 1 .566 0l3.16 7.759a.3.3 0 0 1 .01.025Z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/gregorio-viola-9b6524264"
+                target="_blank"
+                aria-label="LinkedIn"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  class="bi bi-linkedin"
+                  viewBox="0 0 16 16"
+                  width="40px"
+                  height="40px"
+                >
+                  <path
+                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.674 0 7.225 0 7.225z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
