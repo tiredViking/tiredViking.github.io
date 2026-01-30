@@ -7,24 +7,55 @@
 @use "namespaces/social";
 @use "namespaces/form";
 @use "namespaces/projects";
+@use "namespaces/cv";
+@use "namespaces/lang_switch";
 
+// BOOTSTRAP MODULES
+// Configuration
 @import "../../../node_modules/bootstrap/scss/functions";
 @import "namespaces/bootstrap_override";                     // my custom remapped colors
 @import "../../../node_modules/bootstrap/scss/variables";
-@import "../../../node_modules/bootstrap/scss/variables-dark";
 @import "../../../node_modules/bootstrap/scss/maps";
 @import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/utilities";
+
+// Layout & components
 @import "../../../node_modules/bootstrap/scss/root";
 @import "../../../node_modules/bootstrap/scss/reboot";          // CSS reset
 @import "../../../node_modules/bootstrap/scss/type";            // Typography (h1-h6, lead, display-*, small, etc)
 @import "../../../node_modules/bootstrap/scss/containers";      // .container
 @import "../../../node_modules/bootstrap/scss/grid";            // .row, .col-*, .g-* (gap classes)
-@import "../../../node_modules/bootstrap/scss/buttons";         // .btn, .btn-primary, .btn-outline-*, .btn-lg
+//@import "tables"
 @import "../../../node_modules/bootstrap/scss/forms";           // .form-control, .form-label
+@import "../../../node_modules/bootstrap/scss/buttons";         // .btn, .btn-primary, .btn-outline-*, .btn-lg
+//@import "transitions";
+//@import "dropdown";
+//@import "button-group";
+//@import "nav";
+//@import "navbar";
 @import "../../../node_modules/bootstrap/scss/card";            // .card, .card-body, .card-title, .card-text
+//@import "accordion";
+//@import "breadcrumb";
+//@import "pagination";
 @import "../../../node_modules/bootstrap/scss/badge";           // .badge
-@import "../../../node_modules/bootstrap/scss/utilities";
+//@import "alert";
+//@import "progress";
+//@import "list-group";
+//@import "close";
+//@import "toasts";
+//@import "modal";
+//@import "tooltip";
+//@import "popover";
+//@import "carousel";
+//@import "spinners";
+//@import "offcanvas";
+
+// Helpers
+//@import "helpers";
+
+// Utilities
 @import "../../../node_modules/bootstrap/scss/utilities/api";   // Utility classes (d-flex, py-5, mb-3, text-*, bg-*, etc)
+// END BOOTSTRAP MODULES
 
 // General
 body {
