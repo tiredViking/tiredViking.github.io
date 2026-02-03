@@ -1,0 +1,24 @@
+// assets/styles/sass/_cv.scss
+@use "variables" as v; 
+
+html {
+  box-sizing: border-box; 
+
+  body {
+    background-color: v.$light-bg;
+    
+    #home, #skills, #home_ita, #skills_ita {
+      scroll-margin-top: 2rem;
+    } 
+    ul {
+      padding: 0;
+    }
+    h2 {
+      color: v.$primary-color;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+    }
+  }
+}

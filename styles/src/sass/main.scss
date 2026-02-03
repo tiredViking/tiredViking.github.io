@@ -1,0 +1,38 @@
+// assets/styles/sass/main.scss
+@charset 'utf-8';
+
+@use "namespaces/variables" as v;
+
+@use "../../../node_modules/bootstrap/scss/bootstrap" with (
+  $primary: v.$primary-color,
+  $secondary: v.$secondary-color,
+  $light: v.$light-bg,
+  $body-bg: v.$light-bg,
+  $body-color: v.$text-color,
+  // Typography
+  $font-family-sans-serif: ('Inter', system-ui, -apple-system, sans-serif),
+  // Visuals
+  $enable-shadows: true,  // Adds depth to cards
+  $enable-gradients: false
+);
+
+// 3. Load Custom Partials
+@use "namespaces/navbar";
+@use "namespaces/lang";
+@use "namespaces/about";
+@use "namespaces/social";
+@use "namespaces/form";
+@use "namespaces/projects";
+@use "namespaces/cv";
+@use "namespaces/lang_switch";
+
+// Global Styles 
+body {
+    scroll-behavior: smooth;
+    color: v.$text-color; // Ensure text color is applied
+}
+
+// Utility Classes overrides
+.border-start {
+    border-color: v.$primary-color !important;
+}

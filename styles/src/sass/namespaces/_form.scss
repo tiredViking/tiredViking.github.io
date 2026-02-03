@@ -1,0 +1,47 @@
+@use "variables" as v;
+
+.form-control {
+    padding: 0.75rem 1rem;
+    border: 1px solid #e2e8f0; 
+    border-radius: 0.5rem;
+    color: v.$text-color;
+    background-color: v.$white;
+    transition: border-color 0.2s, box-shadow 0.2s;
+
+    &:focus {
+        outline: 0;
+        box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.15); // Custom Indigo glow
+        border-color: v.$primary-color;
+        background-color: v.$white; 
+    }
+
+    &::placeholder {
+        color: #94a3b8; 
+    }
+}
+
+.btn-hero {
+    background-color: v.$primary-color;
+    color: v.$white !important;
+    padding: 0.85rem 2.2rem; // Extra horizontal breathing room
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px; 
+    border: none;
+    border-radius: 50px; // Pill shape 
+    transition: v.$transition-base;
+    
+    // Indigo-tinted shadow for depth
+    box-shadow: 0 10px 15px -5px rgba(67, 56, 202, 0.4);
+
+    &:hover {
+        background-color: darken(#4338ca, 8%);
+        transform: translateY(-3px); // Lift effect
+        box-shadow: 0 20px 25px -5px rgba(67, 56, 202, 0.3);
+    }
+
+    &:active {
+        transform: translateY(-1px);
+    }
+}

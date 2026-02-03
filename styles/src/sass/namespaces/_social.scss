@@ -1,0 +1,22 @@
+@use "variables" as v;
+
+.social-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: v.$secondary-color; // Slate grey by default
+  transition: v.$transition-base;
+}
+.bi-linkedin:hover  {
+  color: #0A66C2;
+  transform: scale(1.1);
+}
+
+.bi-gitlab:hover {
+  color: #FC6D26;
+  transform: scale(1.1);
+}
+
+.bi-github:hover {
+  color: #24292e;
+  transform: scale(1.1);
+}

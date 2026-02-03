@@ -35,7 +35,7 @@
     />
     <link rel="manifest" href="assets/img/site.webmanifest" />
 
-    <link rel="stylesheet" href="assets/styles/sass/purged_css/main.css" />
+    <link rel="stylesheet" href="styles/dist/css/purged_css/main.css" />
   </head>
 
   <body>
@@ -59,7 +59,7 @@
             <li><a href="#about">About Me</a></li>
             <li><a href="#contact" class="btn-primary-custom">Contact</a></li>
             <li><a href="cv.html">My CV</a></li>
-            <li class="ms-lg-4 d-flex alig-items-center gap-1">
+            <li class="ms-lg-4 d-flex align-items-center gap-1">
               <a href="main-it.html" rel="noopener noreferrer" class="lang_pill">IT</a>
               <a href="index.html" rel="noopener noreferrer" class="lang_pill active">EN</a>
             </li>
@@ -69,6 +69,7 @@
     </header>
 
     <main>
+        <!-- Home Section -->
       <section
         id="home"
         class="hero-section d-flex align-items-center bg-light py-5"
@@ -77,7 +78,7 @@
           <div class="row align-items-center">
             <div class="col-lg-7">
               <h1 class="display-3 fw-bold text-dark">Gregorio Viola</h1>
-              <h2 class="h3 text-primary mb-4">
+              <h2 class="h2 text-primary mb-4">
                 CS Student & FullStack Developer
               </h2>
               <div class="d-flex gap-3">
@@ -92,13 +93,17 @@
           </div>
         </div>
       </section>
+
+    <!-- Projects Section -->
       <section id="projects" class="py-5">
         <div class="container py-5">
-          <h2 class="h3 border-start border-4 border-primary ps-3 mb-5">
+          <h2 class="h2 border-start border-4 border-primary ps-3 mb-5">
             Selected Projects
           </h2>
           <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
+
+              <!-- Card 1 -->
+            <article class="col-md-6 col-lg-4">
               <div class="card h-100 border-0 shadow-sm project-card">
                 <div class="card-body p-4 d-flex flex-column">
                   <div class="mb-0 text-primary">
@@ -113,7 +118,7 @@
                       />
                     </svg>
                   </div>
-                  <h5 class="card-title fw-bold">Web Portfolio</h5>
+                  <h3 class="card-title fw-semibold">Web Portfolio</h3>
                   <p class="card-text text-muted small">
                     This portfolio, created for the Start2Impact master's
                     program, is my first project.
@@ -127,8 +132,10 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
+            </article>
+            
+            <!-- Card 2 -->
+            <article class="col-md-6 col-lg-4">
               <div class="card h-100 border-0 shadow-sm project-card">
                 <div class="card-body p-4 d-flex flex-column">
                   <div class="mb-0 text-primary">
@@ -144,7 +151,7 @@
                       />
                     </svg>
                   </div>
-                  <h5 class="card-title fw-bold">Counter Web App</h5>
+                  <h3 class="card-title fw-semibold">Counter Web App</h3>
                   <p class="card-text text-muted small">
                     Web app created for the Start2Impact JavaScript course, this
                     app allows the user to increment or decrement a counter
@@ -165,8 +172,10 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
+            </article>
+
+            <!-- Card 3 -->
+            <article class="col-md-6 col-lg-4">
               <div class="card h-100 border-0 shadow-sm project-card">
                 <div class="card-body p-4 d-flex flex-column">
                   <div class="mb-0 text-primary">
@@ -181,24 +190,25 @@
                       />
                     </svg>
                   </div>
-                  <h5 class="card-title fw-bold">Work in Progress</h5>
+                  <h3 class="card-title fw-semibold">Work in Progress</h3>
                   <p class="card-text text-muted small">
                     Various projects will be added here.
                   </p>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </section>
 
+    <!-- About Section -->
       <section id="about" class="py-5 bg-light about-section">
-        <div class="container py-5">
+        <article class="container py-5">
           <div class="row justify-content-center mb-5">
             <div class="col-lg-8 text-center">
               <h2 class="fw-bold mb-3">About Me</h2>
               <div class="title-separator mx-auto mb-4"></div>
-              <p class="lead text-secondary">Language, Logic, and Linux</p>
+              <h3 class="lead fw-semibold text-primary">Language, Logic, and Linux</h3>
               <p class="text-muted">
                 Graduated in Foreign Languages, specifically English and French,
                 my adventure in tech began thanks to an old PC and Linux; today
@@ -211,7 +221,7 @@
           <div class="row g-4 justify-content-around">
             <div class="col-12 col-md-3">
               <div class="skill-card">
-                <h5 class="fw-bold mb-1">Frontend</h5>
+                <h3 class="mb-1">Frontend</h3>
                 <p class="small text-muted mb-0">
                   HTML, CSS, Sass, JS, Bootstrap
                 </p>
@@ -219,22 +229,23 @@
             </div>
             <div class="col-12 col-md-3">
               <div class="skill-card">
-                <h5 class="fw-bold mb-1">Backend</h5>
+                <h3 class="mb-1">Backend</h3>
                 <p class="small text-muted mb-0">Python, SQL, C, Bash</p>
               </div>
             </div>
             <div class="col-12 col-md-3">
               <div class="skill-card">
-                <h5 class="fw-bold mb-1">Tools</h5>
+                <h3 class="mb-1">Tools</h3>
                 <p class="small text-muted mb-0">
                   Git, LaTeX, Linux, Infor LN ERP
                 </p>
               </div>
             </div>
           </div>
-        </div>
+        </article>
       </section>
 
+    <!-- Contact Section -->
       <section id="contact" class="py-2 bg-white">
         <div class="container py-5">
           <div class="row justify-content-center">
@@ -302,6 +313,8 @@
         </div>
       </section>
     </main>
+
+    <!-- Footer -->
     <footer class="py-4 bg-light border-top">
       <div class="container">
         <div class="row justify-content-center">
@@ -318,8 +331,8 @@
                   fill="currentColor"
                   class="bi bi-github social-icon"
                   viewBox="0 0 16 16"
-                  width="40px"
-                  height="40px"
+                  width="40"
+                  height="40"
                 >
                   <path
                     d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
@@ -333,15 +346,14 @@
                 target="_blank"
                 class="mx-3"
                 aria-label="GitLab"
-                rel="noopener noreferrer"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
-                  class="bi bi-gitlab"
+                  class="social-icon bi bi-gitlab"
                   viewBox="0 0 16 16"
-                  width="40px"
-                  height="40px"
+                  width="40"
+                  height="40"
                 >
                   <path
                     d="m15.734 8.85.025.067a.28.28 0 0 1-.103.313l-4.835 3.49-1.489 1.077a.28.28 0 0 1-.327 0l-1.489-1.077-4.835-3.49a.28.28 0 0 1-.103-.313l.025-.068a.3.3 0 0 1 .01-.025l3.16-7.759a.3.3 0 0 1 .566 0l1.654 4.056h3.202l1.654-4.056a.3.3 0 0 1 .566 0l3.16 7.759a.3.3 0 0 1 .01.025Z"
@@ -358,10 +370,10 @@
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
-                  class="bi bi-linkedin"
+                  class="social-icon bi bi-linkedin"
                   viewBox="0 0 16 16"
-                  width="40px"
-                  height="40px"
+                  width="40"
+                  height="40"
                 >
                   <path
                     d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.674 0 7.225 0 7.225z"
