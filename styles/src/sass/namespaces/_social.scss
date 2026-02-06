@@ -5,6 +5,9 @@
   height: 2.5rem;
   color: v.$secondary-color; // Slate grey by default
   transition: v.$transition-base;
+  display: flex;
+  align-items: center;
+  align-content: center;
 }
 .bi-linkedin:hover  {
   color: #0A66C2;

@@ -6,14 +6,13 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
+  background-color: v.$white; 
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 .custom-nav {
-  top: 0;
   z-index: 1050;
-  background-color: v.$white; 
   // Sharper, smaller shadow for the navbar to separate it from content
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   padding: 0.5rem 0;
 
   .container {
@@ -100,4 +99,16 @@ header {
             transform: rotate(-45deg);
         }
     }
+
+    .visually-hidden {
+      position: absolute;
+      left: -9999px;
+      opacity: 0;
+    }
+
+    .visually-hidden:focus+.menu-button-container,
+    .visually-hidden:focus-visible+.menu-button-container {
+      outline: 2px solid v.$primary-color;
+      outline-offset: 2px;
+    }    
 }

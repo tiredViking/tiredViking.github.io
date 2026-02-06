@@ -11898,13 +11898,12 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 .custom-nav {
-  top: 0;
   z-index: 1050;
-  background-color: #ffffff;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   padding: 0.5rem 0;
 }
 .custom-nav .container {
@@ -11993,6 +11992,16 @@ header {
   bottom: 0;
   transform: rotate(-45deg);
 }
+.custom-nav .visually-hidden {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
+.custom-nav .visually-hidden:focus + .menu-button-container,
+.custom-nav .visually-hidden:focus-visible + .menu-button-container {
+  outline: 2px solid #4338ca;
+  outline-offset: 2px;
+}
 
 .lang-item {
   font-size: 0.9rem;
@@ -12044,6 +12053,9 @@ header {
   height: 2.5rem;
   color: #475569;
   transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  align-content: center;
 }
 
 .bi-linkedin:hover {
@@ -12137,20 +12149,26 @@ header {
 html {
   box-sizing: border-box;
 }
-html body {
+
+body {
   background-color: #f8fafc;
 }
-html body #home, html body #skills, html body #home_ita, html body #skills_ita {
+body #home, body #skills, body #home_ita, body #skills_ita {
   scroll-margin-top: 2rem;
 }
-html body ul {
-  padding: 0;
+body #skills ul, body #skills_ita ul {
+  padding-left: 0;
 }
-html body h2 {
+body .work ul {
+  padding-left: 1rem;
+}
+body h2 {
   color: #4338ca;
 }
-html body h3 {
+body h3 {
   font-size: 1.3rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .lang_pill {

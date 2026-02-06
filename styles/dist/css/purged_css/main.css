@@ -257,6 +257,10 @@ button {
   text-transform: none;
 }
 
+[role=button] {
+  cursor: pointer;
+}
+
 button,
 [type=button],
 [type=submit] {
@@ -435,14 +439,6 @@ textarea {
 .g-4 {
   --bs-gutter-y: 1.5rem;
 }
-
-.g-5 {
-  --bs-gutter-x: 3rem;
-}
-
-.g-5 {
-  --bs-gutter-y: 3rem;
-}
 @media (min-width: 768px) {
   .col-md-3 {
     flex: 0 0 auto;
@@ -469,6 +465,12 @@ textarea {
   .col-lg-8 {
     flex: 0 0 auto;
     width: 66.66666667%;
+  }
+  .g-lg-5 {
+    --bs-gutter-x: 3rem;
+  }
+  .g-lg-5 {
+    --bs-gutter-y: 3rem;
   }
 }
 .form-label {
@@ -832,12 +834,25 @@ textarea.form-control {
   }
 }
 
-.d-flex {
-  display: flex !important;
+.visually-hidden {
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+.visually-hidden:not(caption) {
+  position: absolute !important;
+}
+.visually-hidden * {
+  overflow: hidden !important;
 }
 
-.d-none {
-  display: none !important;
+.d-flex {
+  display: flex !important;
 }
 
 .shadow-sm {
@@ -1068,13 +1083,12 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
+  background-color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
 }
 
 .custom-nav {
-  top: 0;
   z-index: 1050;
-  background-color: #ffffff;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   padding: 0.5rem 0;
 }
 .custom-nav .container {
@@ -1163,6 +1177,16 @@ header {
   bottom: 0;
   transform: rotate(-45deg);
 }
+.custom-nav .visually-hidden {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
+.custom-nav .visually-hidden:focus + .menu-button-container,
+.custom-nav .visually-hidden:focus-visible + .menu-button-container {
+  outline: 2px solid #4338ca;
+  outline-offset: 2px;
+}
 
 .about-section .title-separator {
   width: 60px;
@@ -1195,6 +1219,9 @@ header {
   height: 2.5rem;
   color: #475569;
   transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  align-content: center;
 }
 
 .bi-linkedin:hover {
@@ -1266,20 +1293,26 @@ header {
 html {
   box-sizing: border-box;
 }
-html body {
+
+body {
   background-color: #f8fafc;
 }
-html body #home, html body #skills {
+body #home, body #skills {
   scroll-margin-top: 2rem;
 }
-html body ul {
-  padding: 0;
+body #skills ul {
+  padding-left: 0;
 }
-html body h2 {
+body .work ul {
+  padding-left: 1rem;
+}
+body h2 {
   color: #4338ca;
 }
-html body h3 {
+body h3 {
   font-size: 1.3rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .lang_pill {
