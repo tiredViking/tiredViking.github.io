@@ -28,5 +28,5 @@ Find the live project at: [tiredviking.github.io](https://tiredviking.github.io)
          └──dist/
              └── css/
                  ├── purged_css/    # contains the purged version of compiled scss files; these are the ones used in the final html files
-                 └── compiled_sass/ # css files compiled from main.scss and cv.scss                
+                 └── compiled_sass/ # css files compiled from main.scss              
 ```
